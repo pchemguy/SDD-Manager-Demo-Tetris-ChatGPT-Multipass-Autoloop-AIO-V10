@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested for six predefined cumulative scope passes on 2026-10-24.
 - Delivery mode: strict multipass by default. Later phases/tasks must preserve earlier IDs, names, scope, membership, order, dependencies and exits. No flexible exception granted.
-- Current pass: 2, Gameplay enhancements; reset to DOCS-002. Prior scope completed through DOCS-008 at f4b41b3a7dfe236a8b40fe723e83afde37707f35.
+- Current pass: 2; DOCS-002 accepted locally, publication/issue closure require confirmation below.
 - Approval basis: user response Approve on 2026-10-24 accepts proposal 544b69a9c6bfd16fabd6c7b008fe364d837903ae and all recorded interaction proposals. Six predefined scopes/resets authorized. Later PROJECT approvals waived; remaining document checkpoints preapproved under autodoc/autoloop. Implementation/package QC not selected.
 - Tracking: documentation and implementation enabled by existing root AGENTS.md. All nine standard issues and native milestone verified before any preparation write. Publication: push/read back every owned commit.
 - Stop: all six passes through final DOCS-008. DOCS-009/package QC, documentation integration and implementation are outside the current automatic range.
@@ -80,6 +80,7 @@ The user approved the published brief and recorded interaction proposals on 2026
 | Pass 1 / DOCS-006 | PLAN SHA-256 eca2d038739a0fb828200e00dd77effed2f5f65451cf3fe5fcfa128df05cf161; Phase 1 / milestones 1.1–1.2 bounded to baseline, version 0.1.0. PLAN-REVIEW-REPORT.md covers B01–B05, explicit one-delivery-milestone rationale and special review; strategy Ready, layout next. |
 | Pass 1 / DOCS-007 | layout SHA-256 a01f6721a2c13fdffced043ef5fb967498fc5ea53a602933f1aca19f2209a6ac; combined PLAN/layout review appended to PLAN-REVIEW-REPORT.md with current input identities. Component/source/test/report ownership complete; future report/generated paths distinguished from existing files. Preapproved; TASKS ready to derive. |
 | Pass 1 / DOCS-008 | TASKS SHA-256 da26fd713bda611b9ab1f4dbade3a42607ea7531e46d3496cbac1c486133c7e9; T-001–T-006, one delivery milestone with five implementation tasks plus special phase review. TASKS-REVIEW-REPORT.md records coverage, counts, hierarchy/dependency checks and Ready result. Autodoc preapproval; pass 1 DOCS-008 boundary, next authorized reset to pass 2. |
+| Pass 2 / DOCS-002 | PROJECT.md SHA-256 cc982bc3bb91803121b2a14befbec1ce2f7091e51e70d34a1946c94190464609; Complete current brief includes Hold, ghost, 7-bag, wall kicks, hard drop and interval lock; no conditional visibility/penetrator/configuration adopted yet. Inherited interaction decisions reviewed; no protected delivery changes. Scoped autoloop preapproval applies. |
 
 ## Initialization and current reset
 
@@ -93,4 +94,4 @@ The user approved the published brief and recorded interaction proposals on 2026
 
 ## Pending transitions
 
-Publish/read back reset from f4b41b3a7dfe236a8b40fe723e83afde37707f35; reopen/read back the same DOCS-002–009 issues and verify milestone remains open before current-scope authoring. No implementation authorized.
+Publish/read back the current Pass 2 DOCS-002 checkpoint and close/read back issue #2 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.

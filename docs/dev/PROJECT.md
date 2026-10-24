@@ -12,14 +12,14 @@ Provide responsive, predictable falling-piece gameplay with a readable board, sc
 
 - A 10-column by 20-row visible board and the seven standard tetromino shapes.
 - One falling piece at a time, automatic downward gravity, left/right movement, player-controlled rotation and accelerated downward movement.
-- Collision and board-boundary checks; a piece settles when a downward movement attempt fails.
+- Collision and board-boundary checks; a piece settles after a full gravity interval of grounded lock delay.
 - Complete horizontal rows clear together, remaining rows fall, and the score reflects the number of lines cleared. Gravity accelerates as progress increases.
 - Game over when the next piece cannot spawn in a valid position. Restart clears the board, score and progression and starts a fresh game.
 - Visible score, progression, controls, game-over state and restart control. Gameplay keys do not scroll the page while the game has focus.
 
-Pieces are selected independently with equal probability. Rotation rejects positions that collide or leave the board. These rules keep the playable game small and coherent.
+Pieces use shuffled seven-piece bags. Rotation tries a defined ordered set of wall kicks. Hold allows one exchange per piece lifetime; a ghost previews the landing, and hard drop moves immediately to it while following grounded lock delay. These controls support deliberate placement without changing settled cells before lock.
 
-## Proposed delivery constraints
+## Delivery constraints
 
 Use TypeScript, a Canvas game board and semantic HTML status and controls, with no application backend. Keep simulation time and piece selection controllable for deterministic automated checks. Production assets run in the browser without a server-side runtime.
 
