@@ -73,3 +73,15 @@ Implement the typed settings model, piece-spawn lock policy capture and command 
 ### Milestone 5.2 — Phase review
 
 After 5.1 completes/closes, review six-setting usability, policy combinations, ability interactions and absence of persistence effects, with both-browser output and build/version evidence. Retain docs/dev/reports/phases/5/PHASE-REPORT.md, TODOs and HANDOFF; verify complete-phase integration/release prerequisites.
+
+## Phase 6 — Configuration persistence
+
+Outcome: each setting survives reload/reopen through correctly prioritized URL/cookie sources and immediate per-field persistence on change. Included contracts: S01–S04 and retained configurable-game behavior. Dependency: Phase 5 verified, integrated and published. Target version: 0.6.0. Persist settings only; saved gameplay/resume, accounts and backend services are outside scope.
+
+### Milestone 6.1 — Persistent per-setting configuration
+
+Implement the canonical schema/codec/resolver, browser cookie/history adapter and startup/change integration. Demonstrate mixed-source load, explicit-default cookie overwrite, omitted-key retention, address updates without navigation, reload restoration and graceful independent failures. Gather feedback on effective selected values and truthful persistence status for continue/amend/simplify/stop. Exit: S01–S04 source matrix, cookie/URL/lifetime/browser evidence and C/B/E/G/P regressions, whole-milestone code review/repairs, docs/dev/reports/phases/6/6.1.md and HANDOFF. One bounded milestone keeps resolution, effects and visible restored behavior together.
+
+### Milestone 6.2 — Phase review
+
+After 6.1 completes/closes, review the full intended configurable game, source precedence, actual browser persistence and retained gameplay, with production build/version evidence. Retain docs/dev/reports/phases/6/PHASE-REPORT.md, HANDOFF and final docs/dev/reports/IMPLEMENTATION-REPORT.md aggregating unresolved/deferred milestone/phase TODOs with provenance and solution options. Verify complete-phase integration and requested release readiness; passing checks do not authorize work beyond the selected implementation range.

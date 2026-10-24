@@ -136,3 +136,16 @@ Scope: PLAN conformance; cumulative scope 5. Current source identities:
 Combined placement maps settings state/validation, controls, controller lifecycle, engine policy snapshots and source/view consumers to bounded homes with unit/browser checks. No settings state is duplicated in DOM or game restart state. Session-only behavior requires no persistence adapter. C01–C04 and one integrated delivery milestone have complete paths; earlier allocations retained. Ready for TASKS.
 
 Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.
+
+## Revision 10
+
+Scope: PLAN conformance; cumulative scope 6. Current source identities:
+
+- PLAN.md: SHA-256 `d2430430f649e5cfe6860d54ee781dbfa5623f4d10e304392af58115086cedc2`.
+- SPEC.md: SHA-256 `fe31905b3bd57dc112577f8396e58268a3876e762d73112da83568e66bcff009`.
+- ARCHITECTURE.md: SHA-256 `da29b021ccc05c054fb341b41c83feff80344dbab1562102c00f9389d47a5f57`.
+- DECOMPOSITION.md: SHA-256 `cb1c712e6a6081f18f124fc581a4618d76eaa0af75653451e8b20b1b28af2292`.
+
+S01/schema/resolver, S02 startup/writeback and S03 effects/failures map to 6.1, with S04 browser integration and final phase review 6.2. Delivery milestone counts: 1/2/1/1/1/1 across six phases, special reviews excluded. One final persistence milestone is cohesive and bounded to six settings, with no saved-game/backend backlog. All earlier phase IDs, scope, milestone membership/order, dependencies and exits are byte-identical. Versions 0.1.0–0.6.0 align with coherent delivered increments. Strategy Ready pending current physical placement review.
+
+Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.
