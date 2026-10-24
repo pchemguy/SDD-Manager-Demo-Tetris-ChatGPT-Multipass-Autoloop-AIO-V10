@@ -40,3 +40,17 @@ Scope: SPEC conformance; cumulative scope 3. Current source identities:
 Reviewed G01 against accepted whole-piece decision: exact row boundary, straddling cases, padding/anchor independence, immediate redraw and no gameplay side effects. The renderer can evaluate supplied projected cells without changing core ownership. B/E gameplay contracts remain scoped and unchanged. G01 has deterministic predicate and both-browser screenshot/drop evidence routes; Ready.
 
 Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.
+
+## Revision 3
+
+Scope: SPEC conformance; cumulative scope 4. Current source identities:
+
+- SPEC.md: SHA-256 `5ef9daecde3ddfba60012414f802fffabbc0414b029b18fe480a8c5a2a68593f`.
+- PROJECT.md: SHA-256 `39d4c10b2f1e9b3568dcb5f2608055f7ff14487cd134dcc9176f747f7496eeea`.
+- ARCHITECTURE.md: SHA-256 `ba848d13f5989699b07199cb0ac2c50c20f06afdd4beb3cccbebfb6e09df7865`.
+- DECOMPOSITION.md: SHA-256 `cb4602b497e757c27d86533a29a711d0080c5fb93a5e516aa508473739d12ff3`.
+- ROTATION.md: SHA-256 `488a09ce575bfe718139082e079c14b50828d27e7302e8de534027f6dfd77e98`.
+
+Reviewed P01–P04 against accepted ability scope and current architecture: atomic cap/award/spend, no Hold while active, deepest legal scanning for all three consumers, temporary traversal overlap versus mandatory valid lock, grounded-timer recalculation and lifecycle. Delegated precision: white indicates active ability; settled cells revert to kind color because ability ends on lock. Shared search guarantees a valid destination for accepted candidates, including unusable floors. G01 uses the same landing. B/E/G retained behavior remains scoped; all four new contract groups have core and inspected-browser evidence routes.
+
+Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.

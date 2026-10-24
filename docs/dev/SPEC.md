@@ -100,3 +100,40 @@ G01 governs the complete game's ghost visibility instead of E02's unconditional 
 The predicate is pure; hiding the ghost does not change collision, hard-drop destination, score, lock timing, piece-source state or input. No separate visibility setting is part of this contract.
 
 Acceptance: fixtures with uppermost projected cell at 9 versus 10 produce hide versus show; a straddling vertical I is hidden; an anchor/padding cell above 10 with all occupied cells below still shows; upper/lower transitions restore visibility both ways. Browser scenarios inspect the Canvas output and verify identical drop landing whether the ghost is visible or hidden. Responsible components: Landing projection (cells), Board renderer (predicate and drawing).
+
+## P01 — Bonus ledger and activation
+
+Start/restart with zero bonuses and no active penetrator. Each lock clearing exactly four rows grants one bonus, capped at three, after ordinary line scoring. Other clears grant none; a penetrator's own four-line clear is eligible. P is a discrete activation hotkey with normal focus/repeat rules. With a live regular piece, fully legal current placement and at least one bonus, atomically decrement the count and mark that piece active. With no bonus, game over or an already active penetrator, do nothing and spend nothing. Repeated activation cannot consume another bonus.
+
+Active penetration lasts until lock; restart also clears it. Hold is disabled throughout activation, even if the current Hold slot is empty. Rejected Hold changes no source/slot/timer/bonus state. On legal lock, clear the flag before subsequent spawn. Bonus count and held piece are independent session data; restarting clears both.
+
+Acceptance: 0→activation no-op, 1→0 successful spend, repeated activation no double-spend, awards 0→1 and 3→3, no award for 1–3 row clear, active-piece four-line award, restart and game-over rejection. Indicator state must equal authoritative count after every transaction.
+
+## P02 — Deepest valid penetrator landing
+
+For a penetrator, ignore settled occupancy when traversing, but enforce board bounds on all occupied cells. A valid final placement has all four occupied cells in bounds and no settled overlap. Enumerate anchor rows from the current anchor downward through the last row whose occupied offsets fit; select the greatest row with a fully valid final placement, even if blocking rows occur above it. Current anchor is eligible if legal. Empty matrix padding is irrelevant. This search never clears, overwrites or removes existing cells.
+
+Use exactly this destination for natural fall stopping, hard drop and ghost. At an overlapping intermediate placement, the current anchor is not a legal final candidate, but a lower legal candidate must exist. A lateral/rotation candidate is accepted only if its occupied cells are in bounds and at least one legal final placement exists at or below its anchor. Otherwise reject atomically. For rotation, try E02's kick order with this mode-aware traversal predicate. Ordinary pieces continue using ordinary collision-limited projection; penetration is never inherited by the source or Hold slot.
+
+Acceptance: scan through one/multiple blocking rows to an empty cavity; choose the lowest of several legal cavities; stop at a valid placement above an unusable bottom; accept temporary overlap with a lower valid destination; reject candidate with no valid destination; preserve every pre-existing cell throughout traversal. Ghost and hard drop must agree exactly across these cases, including rotated/edge pieces. G01 evaluates this projected placement's occupied cells.
+
+## P03 — Descent, grounding and lock safety
+
+Natural gravity and soft down move one row toward P02's destination, allowing intermediate overlap; they stop at that destination. A penetrator is grounded only at a fully legal destination with no deeper valid placement under its current geometry. Intermediate collision is never grounding or a failed-down lock. Activation may reveal a deeper destination: recompute grounding and cancel an old grounded timer if contact is lost. At the deepest destination, use E03's full captured interval; hard drop also follows it. A failed downward command at that legal destination follows the applicable lock policy without extending the timer.
+
+Before any lock, validate all four cells against settlement legality, regardless of mode or timer state. Never merge an invalid placement; retain a safe nonmutating failure rather than corrupt the board. Legal penetrator lock uses the ordinary B03 clear/score transaction, then clears ability and spawns a regular piece. Hard-drop points count anchor-row distance actually moved, including rows crossed through blockers.
+
+Acceptance: no lock during overlap, full interval starts only at final legal contact, activation while previously grounded cancels contact when a deeper destination exists, repeat drop does not refresh an unchanged landing, lock preserves settled cells and active ability does not transfer to the next piece.
+
+## P04 — Ability presentation and interaction evidence
+
+Draw every occupied cell of the active penetrator white. Use a white outlined/translucent ghost that remains visually distinct from solid active/settled cells. Regular active and settled pieces use their normal nonwhite kind colors; after penetration ends at lock, the newly settled cells use their original kind color. The side panel shows one lightning symbol per available bonus (0–3), plus readable count/meaning. Update it immediately after award/spend. Hold control/status explicitly indicates that activation makes it unavailable.
+
+Browser acceptance demonstrates earning a four-line bonus, activation/spend, white traversal through occupied cells, Hold rejection, dynamic ghost visibility with penetrating projection, matching hard drop, legal delayed lock and restart clearing state. Inspect Canvas screenshots and side-panel values in both required browsers. No test may award a completion claim from DOM text alone when white rendering/overlap is in scope.
+
+| Contract | Structural owner | Acceptance route |
+| --- | --- | --- |
+| P01 | Session ledger/activation and view status | Atomic cap/award/spend/reject fixtures; live symbol count |
+| P02 | Geometry and mode-aware projection | Deep cavities, rejected candidates, ordinary-mode regressions |
+| P03 | Session engine, controller time | Traversal/ground/contact/valid-lock interaction fixtures |
+| P04 | Renderer/input/status | White appearance, disabled Hold and actual both-browser ability sequence |
