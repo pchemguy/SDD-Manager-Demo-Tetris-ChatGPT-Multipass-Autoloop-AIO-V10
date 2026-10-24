@@ -47,3 +47,12 @@ Hold, drop and timer interactions are session rules, not independent services. U
 - Renderer consumes active ability and projected cells, drawing the live penetrator and its ghost in white with distinguishable treatment. The status/control view consumes bonus count and Hold-disabled state; neither owns a parallel ledger.
 
 Deterministic fixtures cover cavities beneath blockers, invalid bottom rows, rejected geometry with no valid future settlement, activation from a grounded regular piece, Hold rejection without mutation, capped awards and legal lock. Browser scenarios exercise bonus earn/spend indication and actual white movement through a stack before legal settlement.
+
+## Settings and preview components
+
+- Settings model owns six typed values, defaults, allowlist validation and immutable updates. A rejected value changes nothing. The coordinator owns one model instance for the loaded page and keeps it across game restart.
+- Session engine captures the selected general and hard-drop lock policies on every spawn. Feature-enabled flags gate commands through one consistent action path; active penetration supplies a stronger Hold prohibition. Re-enabling Hold does not reset the piece's Hold-used flag.
+- Settings view renders labeled select/checkbox controls from the model and emits updates. Board renderer evaluates the selected ghost policy on authoritative projected cells. Status view shows selected policies and notes when changes apply to the next piece.
+- Next preview reads the source's inspect operation; it never draws randomness, consumes a kind or alters bag boundaries. Hiding the preview affects display only.
+
+Settings unit tests cover every enum/value and default. Engine tests cover lock-policy capture, immediate/follow drop behavior and feature gates; browser tests change controls during ordinary and penetrating play, checking focus isolation, preserved timers, Hold content/availability and preview source identity. Browser settings do not bypass the core's legal-settlement predicate.
