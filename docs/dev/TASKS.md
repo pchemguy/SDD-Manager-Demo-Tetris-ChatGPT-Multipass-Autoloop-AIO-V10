@@ -113,3 +113,23 @@ This is the single owning implementation checklist derived from [PLAN](PLAN.md),
         - [ ] T-025 — Review, test and report phase 5
             Depends on: T-024 and all Phase 5 delivery milestone completion/closure. Scope: whole-phase code review, relevant regressions, blocker repairs, build/version readiness, report and HANDOFF; preserve prior working behavior. Contract: C01–C04 and retained B/E/G/P guarantees.
             Evidence: phase exits and actual app/browser evidence reviewed; findings repaired or eligible noncritical TODOs explained; committed docs/dev/reports/phases/5/PHASE-REPORT.md and HANDOFF; integration/release remain subject to their separate gates.
+
+## Phase 6 — Configuration persistence
+
+- [ ] Phase 6 — Configuration persistence
+    - [ ] Milestone 6.1 — Persistent per-setting configuration
+        - [ ] T-026 — Implement canonical per-setting source resolution
+            Depends on: T-025. Scope: app/settings-codec.ts, shared model schema and source matrix unit fixtures. Contract: S01–S02.
+            Evidence: all six strict schemas, decoding/duplicate cases, independent/mixed-source precedence, explicit-default writeback subset and omitted-cookie retention pass.
+        - [ ] T-027 — Implement cookie and URL effect adapter
+            Depends on: T-026. Scope: browser/settings-storage.ts and injected effect-boundary tests. Contract: S03.
+            Evidence: per-field cookie names/attributes, default-value saves, replaceState preservation of unrelated parameters/fragment/history state, sequential changes and independent/both-destination failures pass without live-setting loss.
+        - [ ] T-028 — Integrate restored startup and persistent controls
+            Depends on: T-026, T-027. Scope: bootstrap/controller/settings status, persistence end-to-end scenarios, README query documentation and 0.6.0 metadata. Contract: S01–S04 with C02 timing and retained gameplay.
+            Evidence: actual both-browser URL/cookie/default startup, explicit-default and omitted-key behavior, no-navigation changes, reload/reopen restoration before first piece and ordinary/penetrator regressions verified; inspect output and truthful failure status.
+            Milestone exit: review the whole capability and dependencies, execute required checks, repair blockers, and commit docs/dev/reports/phases/6/6.1.md plus HANDOFF with this task result and initial completion checkbox. TODO section records None or justified eligible follow-up.
+    - [ ] Milestone 6.2 — Phase review
+        - [ ] T-029 — Review, test and report phase 6
+            Depends on: T-028 and all Phase 6 delivery milestone completion/closure. Scope: whole-phase code review, relevant regressions, blocker repairs, build/version readiness, report and HANDOFF; preserve prior working behavior. Contract: S01–S04 and all retained intended-game guarantees.
+            Evidence: phase exits and actual app/browser evidence reviewed; findings repaired or eligible noncritical TODOs explained; committed docs/dev/reports/phases/6/PHASE-REPORT.md and HANDOFF; integration/release remain subject to their separate gates.
+            Include final docs/dev/reports/IMPLEMENTATION-REPORT.md aggregating all unresolved/deferred milestone and phase TODOs with provenance and options; no unsupported full-project completion.
