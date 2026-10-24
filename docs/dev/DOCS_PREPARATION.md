@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested for six predefined cumulative scope passes on 2026-10-24.
 - Delivery mode: strict multipass by default. Later phases/tasks must preserve earlier IDs, names, scope, membership, order, dependencies and exits. No flexible exception granted.
-- Current pass: 4; DOCS-008 accepted locally, publication/issue closure require confirmation below.
+- Current pass: 5, Session-only game configuration; reset to DOCS-002. Prior scope completed through DOCS-008 at 2735880d05761e37d4b4d2190a3dd7e0b7514f44.
 - Approval basis: user response Approve on 2026-10-24 accepts proposal 544b69a9c6bfd16fabd6c7b008fe364d837903ae and all recorded interaction proposals. Six predefined scopes/resets authorized. Later PROJECT approvals waived; remaining document checkpoints preapproved under autodoc/autoloop. Implementation/package QC not selected.
 - Tracking: documentation and implementation enabled by existing root AGENTS.md. All nine standard issues and native milestone verified before any preparation write. Publication: push/read back every owned commit.
 - Stop: all six passes through final DOCS-008. DOCS-009/package QC, documentation integration and implementation are outside the current automatic range.
@@ -40,6 +40,7 @@ The user approved the published brief and recorded interaction proposals on 2026
 | Pass 2 / inherited decisions | Carry forward accepted cross-scope decisions from Pass 1; current delta: Gameplay enhancements. Recheck applicability before authoring. | User-approved predefined sequence and autoloop delegation | Current; no protected delivery-range change |
 | Pass 3 / inherited decisions | Carry forward accepted cross-scope decisions from Pass 1; current delta: Conditional ghost visibility. Recheck applicability before authoring. | User-approved predefined sequence and autoloop delegation | Current; no protected delivery-range change |
 | Pass 4 / inherited decisions | Carry forward accepted cross-scope decisions from Pass 1; current delta: Penetrator mode. Recheck applicability before authoring. | User-approved predefined sequence and autoloop delegation | Current; no protected delivery-range change |
+| Pass 5 / inherited decisions | Carry forward accepted cross-scope decisions from Pass 1; current delta: Session-only game configuration. Recheck applicability before authoring. | User-approved predefined sequence and autoloop delegation | Current; no protected delivery-range change |
 
 ## Cross-scope decisions
 
@@ -72,6 +73,7 @@ The user approved the published brief and recorded interaction proposals on 2026
 | 1 | f4b41b3a7dfe236a8b40fe723e83afde37707f35; PLAN SHA-256 eca2d038739a0fb828200e00dd77effed2f5f65451cf3fe5fcfa128df05cf161; TASKS SHA-256 da26fd713bda611b9ab1f4dbade3a42607ea7531e46d3496cbac1c486133c7e9; phases 1–1 and their existing task ranges immutable. |
 | 2 | ae73199eab39a89451ea748658a4c17a8325ee41; PLAN SHA-256 0c6036b2c4de6d8ce51981194961187bf4b64ae45d4eb0d3a99077cbca75b2f5; TASKS SHA-256 54f7c6615d9dfa48a89a9fbea4e10a37e5c55e5a183cdab8329328bc541e1fee; phases 1–2 and their existing task ranges immutable. |
 | 3 | 1c986b94423e839e8d2d765a6781ab2933dcfdc5; PLAN SHA-256 7f32a9e05dd683e829571be8335dc4232ade3212562ea1e5ebced7cdba82ad8b; TASKS SHA-256 cc9a836320716efa214e5b27899593f2b61343402e6072952945a4309d096006; phases 1–3 and their existing task ranges immutable. |
+| 4 | 2735880d05761e37d4b4d2190a3dd7e0b7514f44; PLAN SHA-256 51d67dd3dceec0abeeb7806ce32ef52523c55e03dbd2abca5c051dcdb8c0dc99; TASKS SHA-256 3b6a01d95e0d09c8cfd0730b624a8be9799f9dd60ff814b560f83cd3f37a0c1b; phases 1–4 and their existing task ranges immutable. |
 
 ## Accepted document states
 
@@ -114,8 +116,8 @@ The user approved the published brief and recorded interaction proposals on 2026
 - Tracking gate: sdd-docs-main milestone 1; DOCS-001–009 issues #1–#9, ordered, exact bundled brief content and milestone associations verified before writes. Standard definitions from repository-bundled SDD Manager v0.15.2.
 - Git baseline: clean template main at 0e4dfbff6d3c6540e2300457878f12d32c131b4e; documentation branch created from published provenance merge cc0c042d00bb42f3171d16da27f03c4aedb794b8. Existing guidance and policies preserved.
 - Credentials: supplied repository credential saved in conventional ignored/untracked file after projection, with effective exclusion verified. No values in tracked records.
-- Current reset: 3 → 4; predefined autoloop scope Penetrator mode; user first approval covers reset. Earlier PLAN/TASKS retained unchanged; same issues reopen after this reset publication.
+- Current reset: 4 → 5; predefined autoloop scope Session-only game configuration; user first approval covers reset. Earlier PLAN/TASKS retained unchanged; same issues reopen after this reset publication.
 
 ## Pending transitions
 
-Publish/read back the current Pass 4 DOCS-008 checkpoint and close/read back issue #8 with its exact commit evidence. Recover actual Git/hosted state before replay. Then perform the authorized reset for the next predefined scope.
+Publish/read back reset from 2735880d05761e37d4b4d2190a3dd7e0b7514f44; reopen/read back the same DOCS-002–009 issues and verify milestone remains open before current-scope authoring. No implementation authorized.

@@ -7,31 +7,31 @@ Preparation tasks and completion checkboxes only. Control, decisions and evidenc
     - Inspect all four root destinations: `AI_DISCLOSURE.md`, `SDD-MANAGER.md`, `AGENTS.md` and `SKILL_DISCOVERY_PROTOCOL.md`. Preserve existing files and copy only missing files unchanged from the running package.
     - Establish/reconcile this task list, `DOCS_PREPARATION.md` and `HANDOFF.md` after the applicable pre-write tracking gate. Record original retained/copied filenames, preservation/copy checks, actual provenance default/override basis and setup state and the continuation decision in DOCS_PREPARATION; provenance assets and generated records are outside the four-root-file presence test.
     - Commit initialization files, preparation evidence, HANDOFF and this task checked together; publish/read back before issue closure. Report initialization and stop before document work for mixed initial root-file presence unless explicit applicable preapproval covers continuation. None/all present adds no approval pause.
-- [x] DOCS-002 — Prepare and accept PROJECT.
+- [ ] DOCS-002 — Prepare and accept PROJECT.
     - Depends on DOCS-001 and resolution of any initialization continuation stop.
     - Establish purpose, users, outcomes, intended scope, non-goals and consequential constraints; resolve material assumptions/decisions. Maintain truthful root README disclosure/usage links.
     - Present the proposal for approval or apply scoped preapproval. Commit the accepted document state, DOCS_PREPARATION decision/evidence and this checked task together; publish/read back before issue closure or dependent work.
-- [x] DOCS-003 — Prepare and accept ARCHITECTURE.
+- [ ] DOCS-003 — Prepare and accept ARCHITECTURE.
     - Depends on DOCS-002.
     - Define major blocks, relationships, dependency direction and consequential structural decisions from the accepted brief, including necessary children.
     - Check consistency, obtain approval or apply scoped preapproval, and commit the accepted state, DOCS_PREPARATION evidence and this checked task together; publish/read back before issue closure or dependent work.
-- [x] DOCS-004 — Prepare and accept DECOMPOSITION.
+- [ ] DOCS-004 — Prepare and accept DECOMPOSITION.
     - Depends on DOCS-003.
     - Define component responsibilities, collaboration, ownership and design-level interface boundaries consistently with ARCHITECTURE.
     - Check consistency, obtain approval or apply scoped preapproval, and commit the accepted state, DOCS_PREPARATION evidence and this checked task together; publish/read back before issue closure or dependent work.
-- [x] DOCS-005 — Prepare and accept SPEC.
+- [ ] DOCS-005 — Prepare and accept SPEC.
     - Depends on DOCS-004.
     - Specify observable behavior, interfaces, data/error contracts, required qualities and acceptance conditions from the accepted design, including necessary children.
     - Pass required SPEC QC and approval/preapproval. Commit the accepted state, QC report, DOCS_PREPARATION evidence and this checked task together; publish/read back before issue closure or dependent work.
-- [x] DOCS-006 — Prepare and accept PLAN.
+- [ ] DOCS-006 — Prepare and accept PLAN.
     - Depends on DOCS-005 and required SPEC QC.
     - Define bounded useful delivery phases, milestones, dependencies and exits against SPEC, starting with the simplest reasonable MVP.
     - Pass PLAN strategy QC and approval/preapproval. Commit the accepted state, review report, DOCS_PREPARATION evidence and this checked task together; publish/read back before issue closure or layout work.
-- [x] DOCS-007 — Prepare and accept layout.
+- [ ] DOCS-007 — Prepare and accept layout.
     - Depends on DOCS-006 and PLAN strategy QC.
     - Allocate source, tests, documentation and artifacts to physical paths consistently with design and PLAN; review PLAN/layout together and update the PLAN review report.
     - Pass combined QC and approval/preapproval. Commit the accepted state, updated review report, DOCS_PREPARATION evidence and this checked task together; publish/read back before issue closure or dependent work.
-- [x] DOCS-008 — Prepare and accept TASKS.
+- [ ] DOCS-008 — Prepare and accept TASKS.
     - Depends on DOCS-007 and required SPEC/PLAN/layout QC.
     - Derive executable tasks, dependencies and milestone/phase review units; check traceability and bounded increments.
     - Pass task-list QC and approval/preapproval. Commit the accepted TASKS state, QC report, DOCS_PREPARATION evidence and this checked task together, including HANDOFF at an autodoc stop; publish/read back before issue closure and the selected stop/reset/advance boundary. Do not start implementation or activate implementation-phase objects.
