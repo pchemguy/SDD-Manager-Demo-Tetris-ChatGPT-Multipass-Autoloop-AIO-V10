@@ -37,3 +37,15 @@ Integrate E03 interval timing with hard drop and ghost using one projection. Dep
 ### Milestone 2.3 — Phase review
 
 After 2.1–2.2 complete/close, review the integrated enhanced game, browser interaction/screenshots, complete core timing/geometry/bag/hold coverage and production build. Retain docs/dev/reports/phases/2/PHASE-REPORT.md, TODOs and HANDOFF; verify version and release/integration readiness before the published complete-phase merge. Prior classic scoring, game-over/restart and focus guarantees remain applicable.
+
+## Phase 3 — Conditional ghost visibility
+
+Outcome: ghost assistance follows the complete-piece midline rule while gameplay remains unchanged. Included contract: G01 and relevant projection/rendering regressions. Dependency: Phase 2 verified, integrated and published. Target version: 0.3.0. Settings and penetrator behavior are outside this phase's exits.
+
+### Milestone 3.1 — Midline-aware ghost
+
+Implement the pure projected-cell visibility predicate in the renderer, integrate redraw and gather upper/lower/straddling screenshots. Demonstrate that hidden and visible ghosts have identical hard-drop destinations; use feedback on boundary clarity for continue/amend/simplify/stop within the authorized range. Exit: G01 fixtures and required-browser rendering evidence, enhanced gameplay regressions, whole-milestone review/repairs, docs/dev/reports/phases/3/3.1.md and HANDOFF. This deliberately narrow outcome needs one delivery milestone, without unrelated padding.
+
+### Milestone 3.2 — Phase review
+
+After 3.1 completes/closes, review visibility integration, regressions and build/version readiness. Retain docs/dev/reports/phases/3/PHASE-REPORT.md, TODOs and HANDOFF; verify complete-phase integration/release prerequisites while preserving Phase 2 gameplay.

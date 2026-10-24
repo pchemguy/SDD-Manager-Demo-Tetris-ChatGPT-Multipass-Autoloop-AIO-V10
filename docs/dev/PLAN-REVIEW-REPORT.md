@@ -55,3 +55,16 @@ Scope: PLAN conformance; cumulative scope 2. Current source identities:
 Combined placement recheck maps rotation/landing/bag/Hold/timers and consuming input/renderers to source/unit/browser homes. Phase 1 remains unchanged; Phase 2 has two delivery milestones with clear dependency and scoped exits. E01–E04 have complete delivery and physical ownership. No unresolved boundary or path conflict; Ready for task derivation.
 
 Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.
+
+## Revision 4
+
+Scope: PLAN conformance; cumulative scope 3. Current source identities:
+
+- PLAN.md: SHA-256 `7f32a9e05dd683e829571be8335dc4232ade3212562ea1e5ebced7cdba82ad8b`.
+- SPEC.md: SHA-256 `3a01580314e244aca554cd2faa6078aa14ff28d2ae3bc34f925dbddadcb9edb9`.
+- ARCHITECTURE.md: SHA-256 `9c4237b24e91af4b32914048962c2d1b3efe4e5bd18af68bd6814dcaac1df0b6`.
+- DECOMPOSITION.md: SHA-256 `d25daf16ceabfab852b7ed28e99b1f04f7b5d9d807bed2da517f48f053c6f9e7`.
+
+Coverage: G01 → 3.1 with phase integration review at 3.2. Delivery milestone counts: Phase 1=1, Phase 2=2, Phase 3=1; special phase reviews excluded. Small-group assessment: Phase 3 is a single bounded user-visible policy requiring no new subsystem; splitting or merging into an earlier protected phase would add overhead or violate strict delivery preservation. Existing Phase 1/2 ranges remain byte-identical. Strategy Ready, unchanged physical placement requires current recheck.
+
+Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.
