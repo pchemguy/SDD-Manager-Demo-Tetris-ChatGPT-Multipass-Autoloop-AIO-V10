@@ -137,3 +137,49 @@ Browser acceptance demonstrates earning a four-line bonus, activation/spend, whi
 | P02 | Geometry and mode-aware projection | Deep cavities, rejected candidates, ordinary-mode regressions |
 | P03 | Session engine, controller time | Traversal/ground/contact/valid-lock interaction fixtures |
 | P04 | Renderer/input/status | White appearance, disabled Hold and actual both-browser ability sequence |
+
+## C01 — Six session settings and defaults
+
+Settings are independent validated values with the following choices. The full game uses these configurable policies; G01 defines the dynamic option, E03 defines interval locking and P01's active-penetrator Hold prohibition always applies.
+
+| Setting | Allowed choices | Default | Effective boundary |
+| --- | --- | --- | --- |
+| ghost | hide, dynamic, show | dynamic | Immediately on next render |
+| hardDrop | on, off | on | Next command |
+| nextPreview | on, off | on | Immediately on next render |
+| dropLock | follow, immediate | follow | Next piece spawn, including Hold replacement |
+| lock | failed, interval | interval | Next piece spawn, including Hold replacement |
+| hold | on, off | on | Next command; penetration still disables |
+
+Render all six as labeled keyboard-operable side-panel controls with current selected values. Reject unknown/invalid values without changing any setting or game state. Update the chosen value atomically and keep unrelated choices unchanged. Keep controls synchronized with the model. Focus within controls must not trigger game actions or suppress native editing/navigation. At 1280×720 the board, settings and status remain readable without overlap; allow scrolling on smaller viewports.
+
+## C02 — Live changes and lifetime
+
+Serialize setting changes with gameplay commands. Presentation toggles and feature gates apply to subsequent actions/renders. General/drop lock policies are copied into the live piece at spawn, not read afresh on every tick. Changing either while a piece is falling/grounded changes the selected setting for the next spawn but preserves the current piece's policy and deadline. A successful Hold exchange is a spawn for policy capture while retaining E01's once-per-lock restriction. Communicate the next-piece application rule beside locking controls.
+
+Disabling Hold preserves the stored kind and current Hold-used flag; mark it unavailable rather than spending/exchanging it. Re-enabling restores availability only when the piece has not used Hold and is not an active penetrator. Disabling hard drop makes Space a no-op with no drop points, placement or timer reset. Changing settings never resets score, board, bonus count or source queue. Game restart preserves selected settings but resets normal game state. Each full page initialization starts from the defaults; do not read or write cookies, URL parameters, localStorage, sessionStorage or another persistence source for these session-only contracts.
+
+Acceptance: each control works independently; changing a grounded piece's lock policy does not change its current deadline; next ordinary or Hold-spawned piece uses the new policy; toggles work while penetrating; disabling/re-enabling Hold preserves its slot and once-per-piece restriction; restart retains settings, reload resets defaults; neither query strings nor cookies influence session-only initialization.
+
+## C03 — Locking combinations
+
+General `failed` locks a legally grounded piece on the first failed gravity or one-row soft-down attempt. Contact alone does not lock. General `interval` uses E03 exactly: failed down cannot shorten or reset its full contact interval. Both policies require legal settlement, including penetrators.
+
+Hard-drop `follow` moves to the mode-appropriate landing and uses that live piece's captured general policy. The drop command itself is not a failed one-row downward attempt: under `failed`, even zero-distance drop waits for a subsequent failed gravity/soft-down attempt; under `interval`, it starts/retains contact timing. Hard-drop `immediate` locks a legal projected placement in the same command regardless of general policy, including zero distance. It uses B03/P01 transactions and clears the live timer. A disabled hard drop does nothing under either policy. Soft-drop behavior still follows general policy. Drop scoring is awarded once for rows actually moved, never again on a zero-distance repeat.
+
+Acceptance: cover the 2×2 general/drop policy matrix with both regular and penetrating pieces, zero/nonzero distance, enabled/disabled drop, contact timing and legal settlement. An immediate penetrating drop must pass through blockers before locking at the deepest legal destination. Interleaving setting changes cannot give the current piece a mixture of old and new captured policies.
+
+## C04 — Ghost options and next preview
+
+`hide` suppresses all ghost drawing; `dynamic` applies G01's entire-projected-piece test; `show` makes every valid projection eligible regardless of midline. Existing coincident-piece legibility treatment applies in all visible modes. Visibility never changes landing. Active penetrator projection remains P02 and ordinary projection remains E02.
+
+When nextPreview is on, show the next queued kind with normal nonwhite kind colors and a readable Next label. It is exactly the next source consumption if no populated-Hold swap intervenes. Preview is not the held piece: a populated Hold exchange leaves next unchanged, while empty Hold consumes one kind and advances the preview. Rendering/hiding/re-enabling the preview consumes no queue/random values. At startup, seed/inspect the bag consistently so first preview and next actual consumption agree.
+
+Acceptance: all ghost modes above/below/straddling midline for ordinary and penetrating pieces, preview identity across draw/empty Hold/populated Hold/visibility toggles, no random-consumption changes from repeated renders, and actual controls/screenshots in both browsers. Controls remain accessible during game over and settings still govern a restart.
+
+| Contract | Structural owner | Evidence route |
+| --- | --- | --- |
+| C01 | Settings model/view and coordinator | Defaults/allowlists, six independent controls and focus |
+| C02 | Coordinator, engine spawn and view | Policy snapshots, feature gates, restart/reload lifetime |
+| C03 | Engine/drop/landing | Policy matrix, exact timing, penetration and zero-distance cases |
+| C04 | Renderer, source inspect and status view | Mode predicates, nonconsuming preview and browser output |

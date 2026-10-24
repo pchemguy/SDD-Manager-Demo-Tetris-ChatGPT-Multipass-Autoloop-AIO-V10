@@ -54,3 +54,17 @@ Scope: SPEC conformance; cumulative scope 4. Current source identities:
 Reviewed P01–P04 against accepted ability scope and current architecture: atomic cap/award/spend, no Hold while active, deepest legal scanning for all three consumers, temporary traversal overlap versus mandatory valid lock, grounded-timer recalculation and lifecycle. Delegated precision: white indicates active ability; settled cells revert to kind color because ability ends on lock. Shared search guarantees a valid destination for accepted candidates, including unusable floors. G01 uses the same landing. B/E/G retained behavior remains scoped; all four new contract groups have core and inspected-browser evidence routes.
 
 Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.
+
+## Revision 4
+
+Scope: SPEC conformance; cumulative scope 5. Current source identities:
+
+- SPEC.md: SHA-256 `99759e7b179b87a484b04961e83fabf0086e4a4ac0169dd8986209328a64a444`.
+- PROJECT.md: SHA-256 `734c21a5c5ca44dadda4785e1c34ceb47f48c3cf397d338fa4625e20a17aed1d`.
+- ARCHITECTURE.md: SHA-256 `3fa49b6ee8bdd4345dee7d7f2abe13c06f8be9394ba13bafcba30ba32acc52fb`.
+- DECOMPOSITION.md: SHA-256 `3105fb07f123685bc52e99196e63032e58958e49df3520b814579991f23e7771`.
+- ROTATION.md: SHA-256 `488a09ce575bfe718139082e079c14b50828d27e7302e8de534027f6dfd77e98`.
+
+Reviewed C01–C04 against six requested controls and inherited gameplay: exact choices/defaults, immediate toggles versus per-spawn captured policies, no retroactive deadline changes, Hold slot/used preservation and penetration precedence. The 2×2 lock matrix distinguishes a drop placement command from failed one-row down, including zero distance and legal penetrator settlement. Preview is authoritative/nonconsuming across both Hold paths. Session reload defaults and absence of persistence are explicit, testable and scoped; all contract groups have core/model/browser evidence routes.
+
+Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.
