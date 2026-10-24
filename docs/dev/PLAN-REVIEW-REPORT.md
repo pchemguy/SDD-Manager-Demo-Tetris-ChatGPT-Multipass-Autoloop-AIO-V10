@@ -41,3 +41,17 @@ Scope: PLAN conformance; cumulative scope 2. Current source identities:
 Coverage: E01/kicks → 2.1; E02 projection/E03–E04 → 2.2; 2.3 reviews combined interactions. Delivery milestone counts: Phase 1=1, Phase 2=2, excluding special reviews. Both small counts reviewed: one cohesive classic outcome; two enhanced control/landing outcomes split by active-piece lifecycle dependency. Six enhancements form one coherent placement-control increment, without unrelated settings. Exact prior PLAN prefix retained, preserving Phase 1 IDs, names, dependencies, scope and exits. Strategy Ready; current layout extension pending.
 
 Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.
+
+## Revision 3
+
+Scope: PLAN conformance; cumulative scope 2. Current source identities:
+
+- PLAN.md: SHA-256 `0c6036b2c4de6d8ce51981194961187bf4b64ae45d4eb0d3a99077cbca75b2f5`.
+- SPEC.md: SHA-256 `0b31cc98d62e8cf165f5d44f76a0f0403567356509d2e274341fd3fb72af4740`.
+- ARCHITECTURE.md: SHA-256 `9c4237b24e91af4b32914048962c2d1b3efe4e5bd18af68bd6814dcaac1df0b6`.
+- DECOMPOSITION.md: SHA-256 `d25daf16ceabfab852b7ed28e99b1f04f7b5d9d807bed2da517f48f053c6f9e7`.
+- layout.md: SHA-256 `51692ccaa2b29020e85b99103506b948455ad7d3d152b0c98fdd2a670e294df8`.
+
+Combined placement recheck maps rotation/landing/bag/Hold/timers and consuming input/renderers to source/unit/browser homes. Phase 1 remains unchanged; Phase 2 has two delivery milestones with clear dependency and scoped exits. E01–E04 have complete delivery and physical ownership. No unresolved boundary or path conflict; Ready for task derivation.
+
+Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.

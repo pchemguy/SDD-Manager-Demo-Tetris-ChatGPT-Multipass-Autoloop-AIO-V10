@@ -26,3 +26,9 @@ Package manager/runtime versions and commands must be pinned and documented duri
 ## Reports and generated assets
 
 Milestone reports belong at docs/dev/reports/phases/<phase>/<milestone>.md and phase reports at docs/dev/reports/phases/<phase>/PHASE-REPORT.md. TASKS names future report paths; they are not created until their assigned implementation boundaries. Build artifacts, coverage, logs and screenshots are reproducible evidence rather than source. Keep only deliberately selected stable fixtures tracked. Manual conversation provenance is governed by docs/ai-logs/AGENTS.md and excluded from routine product validation.
+
+## Placement-assistance ownership
+
+Ordered rotation policy/tables live in src/core/rotation.ts with tests/unit/rotation.test.ts. Shared landing projection lives in src/core/landing.ts with tests/unit/landing.test.ts. Piece-source bag/inspect behavior belongs in src/core/random.ts; Hold and lock timers remain in src/core/engine.ts and types.ts rather than browser state. Their boundary fixtures extend tests/unit/random.test.ts and engine.test.ts.
+
+Hold display and ghost drawing extend browser/view.ts and renderer.ts; action bindings extend browser/input.ts. Browser assist scenarios live in tests/e2e/enhancements.spec.ts. The normative kick child is docs/dev/spec/ROTATION.md. No second landing implementation belongs in a view or test helper; test fixtures assert the production projection result through defined seams.
