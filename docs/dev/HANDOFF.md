@@ -1,8 +1,8 @@
 # Project handoff
 
-Checkpoint: main documentation initialization, DOCS-001. This snapshot describes its containing checkpoint; reconstruct later progress from the linked owners and Git.
+Checkpoint: main documentation completion of cumulative scope 1, DOCS-008 boundary.
 
-Outcome: existing root guidance preserved; default manual provenance scaffold integrated and published; six-pass scope and proposed interaction decisions retained.
+Outcome: scope 1 documented through TASKS with per-document QC; no implementation or whole-package QC claimed.
 
 ## Workflow and sources
 
@@ -13,7 +13,7 @@ Outcome: existing root guidance preserved; default manual provenance scaffold in
 ## Scope and human decisions
 
 - Authorized: six cumulative strict documentation passes from classic baseline through configuration persistence.
-- Next stop: first PROJECT proposal approval. Later PROJECT approvals waived and later document checkpoints preapproved by requested mode; run all passes only after first approval, stop after final DOCS-008 before package QC.
+- First PROJECT/sequence approval: user response Approve on 2026-10-24, covering proposal 544b69a and recorded interaction rules. Subsequent PROJECT and document checkpoints are preapproved. Stop after scope 6 DOCS-008 before package QC.
 - Implementation range: none authorized. Subsequent phase releases requested only when implementation is authorized, verified and integrated.
 - Tracking: docs and implementation enabled by existing AGENTS policy; nine preparation issues verified. Every owned commit pushed/read back. Reporting: Standard after Explicit startup.
 
@@ -26,5 +26,5 @@ Outcome: existing root guidance preserved; default manual provenance scaffold in
 
 ## Pending work and next action
 
-- Initialization commit publication and DOCS-001 issue #1 closure require confirmation after this checkpoint.
-- Next eligible action: finish those effects, publish the Pass 1 PROJECT proposal and README links, then request approval. Current interaction decisions remain proposals in DOCS_PREPARATION until approval.
+- DOCS-008 completion commit publication and issue #8 closure require readback. After those effects, reset to scope 2.
+- Recover actual later progress from DOCS_PREPARATION and Git. No implementation range is authorized.

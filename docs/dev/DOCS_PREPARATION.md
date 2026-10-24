@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested for six predefined cumulative scope passes on 2026-10-24.
 - Delivery mode: strict multipass by default. Later phases/tasks must preserve earlier IDs, names, scope, membership, order, dependencies and exits. No flexible exception granted.
-- Current pass: 1; DOCS-007 accepted locally, publication/issue closure require confirmation below.
+- Current pass: 1; DOCS-008 accepted locally, publication/issue closure require confirmation below.
 - Approval basis: user response Approve on 2026-10-24 accepts proposal 544b69a9c6bfd16fabd6c7b008fe364d837903ae and all recorded interaction proposals. Six predefined scopes/resets authorized. Later PROJECT approvals waived; remaining document checkpoints preapproved under autodoc/autoloop. Implementation/package QC not selected.
 - Tracking: documentation and implementation enabled by existing root AGENTS.md. All nine standard issues and native milestone verified before any preparation write. Publication: push/read back every owned commit.
 - Stop: all six passes through final DOCS-008. DOCS-009/package QC, documentation integration and implementation are outside the current automatic range.
@@ -23,7 +23,7 @@
 
 The user approved the published brief and recorded interaction proposals on 2026-10-24 (response Approve). These originated as agent proposals; their acceptance is now human-confirmed. Future choices remain here until their applicable scope is adopted. Later material discoveries fall under autoloop delegation, with visible rationale and durable decisions.
 
-| Origin / decision | Proposed resolution and rationale | Source / basis | Applicability / status |
+| Origin / decision | Resolution and rationale | Source / basis | Applicability / status |
 | --- | --- | --- | --- |
 | Pass 1 / platform | Desktop keyboard browser game; TypeScript with Canvas board and semantic HTML controls; no backend. Canvas suits board drawing; HTML keeps controls accessible. Plain JavaScript reduces tooling but loses static contracts; a full UI framework adds little to this UI. | Agent recommendation from browser scope and minimal baseline; accepted by user 2026-10-24 | All passes; accepted |
 | Pass 1 / baseline | 10-column by 20-row visible board, seven tetromino types, independent uniform piece selection, simple rotation rejecting collisions, lock on failed downward attempt, conventional line scoring and increasing gravity speed, fresh game on restart. | Agent proposal for coherent minimal classic game | Pass 1; accepted. Randomizer and locking superseded by requested Pass 2 additions when adopted |
@@ -54,7 +54,12 @@ The user approved the published brief and recorded interaction proposals on 2026
 | --- | --- |
 | DOCS-001 | All four original root files retained byte for byte against initial commit 0e4dfbff6d3c6540e2300457878f12d32c131b4e. No copies needed. Task template copied and only DOCS-001 checked. Separate preparation record/HANDOFF created. Provenance evidence below. Published checkpoint 17f644b2f4983362f28779e4ca8d9cdf28ecc961 matched remote readback; issue #1 closed with evidence and verified completed. |
 | DOCS-002 | Pass 1 PROJECT proposed at docs/dev/PROJECT.md, SHA-256 9ab792074afcd37db09a523909ecbf0d02a70688818c505fd05fab915c232afb; accepted by user 2026-10-24. Scope and document-boundary review passed: classic baseline only, no future enhancements imported, principal intent/scope/non-goals and proposed technology/verification choices visible. Local README links and original root-file preservation checked; no game code/tests executed. First approval also confirms proposed per-pass/cross-scope decisions for the six supplied scopes. DOCS-002 completion is recorded with this approval; issue closure follows publication. |
-| DOCS-003–008 | Not started; downstream of first PROJECT approval. |
+| DOCS-003 | Pass 1 accepted by scoped autodoc preapproval; exact state and QC in Accepted document states. |
+| DOCS-004 | Pass 1 accepted by scoped autodoc preapproval; exact state and QC in Accepted document states. |
+| DOCS-005 | Pass 1 accepted by scoped autodoc preapproval; exact state and QC in Accepted document states. |
+| DOCS-006 | Pass 1 accepted by scoped autodoc preapproval; exact state and QC in Accepted document states. |
+| DOCS-007 | Pass 1 accepted by scoped autodoc preapproval; exact state and QC in Accepted document states. |
+| DOCS-008 | Pass 1 accepted by scoped autodoc preapproval; exact state and QC in Accepted document states. |
 | DOCS-009 | Not selected by autodoc/autoloop range. |
 
 ## Accepted document states
@@ -67,6 +72,7 @@ The user approved the published brief and recorded interaction proposals on 2026
 | Pass 1 / DOCS-005 | SPEC SHA-256 2c533b9f43681af6cdb57002cf2905d1763897b8d91bf17882194a5dc53a19cc; B01–B05 accepted by scoped preapproval. SPEC-REVIEW-REPORT.md records current design hashes, scope/geometry/time/lifecycle/error review and Ready result. Detailed key/scoring timing choices are delegated agent precision within approved baseline. |
 | Pass 1 / DOCS-006 | PLAN SHA-256 eca2d038739a0fb828200e00dd77effed2f5f65451cf3fe5fcfa128df05cf161; Phase 1 / milestones 1.1–1.2 bounded to baseline, version 0.1.0. PLAN-REVIEW-REPORT.md covers B01–B05, explicit one-delivery-milestone rationale and special review; strategy Ready, layout next. |
 | Pass 1 / DOCS-007 | layout SHA-256 a01f6721a2c13fdffced043ef5fb967498fc5ea53a602933f1aca19f2209a6ac; combined PLAN/layout review appended to PLAN-REVIEW-REPORT.md with current input identities. Component/source/test/report ownership complete; future report/generated paths distinguished from existing files. Preapproved; TASKS ready to derive. |
+| Pass 1 / DOCS-008 | TASKS SHA-256 da26fd713bda611b9ab1f4dbade3a42607ea7531e46d3496cbac1c486133c7e9; T-001–T-006, one delivery milestone with five implementation tasks plus special phase review. TASKS-REVIEW-REPORT.md records coverage, counts, hierarchy/dependency checks and Ready result. Autodoc preapproval; pass 1 DOCS-008 boundary, next authorized reset to pass 2. |
 
 ## Initialization and current reset
 
@@ -80,4 +86,4 @@ The user approved the published brief and recorded interaction proposals on 2026
 
 ## Pending transitions
 
-Publish/read back the current Pass 1 DOCS-007 checkpoint and close/read back issue #7 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.
+Publish/read back the current Pass 1 DOCS-008 checkpoint and close/read back issue #8 with its exact commit evidence. Recover actual Git/hosted state before replay. Then perform the authorized reset for the next predefined scope.
