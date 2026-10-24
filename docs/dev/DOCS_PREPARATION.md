@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested for six predefined cumulative scope passes on 2026-10-24.
 - Delivery mode: strict multipass by default. Later phases/tasks must preserve earlier IDs, names, scope, membership, order, dependencies and exits. No flexible exception granted.
-- Current pass: 2; DOCS-003 accepted locally, publication/issue closure require confirmation below.
+- Current pass: 2; DOCS-004 accepted locally, publication/issue closure require confirmation below.
 - Approval basis: user response Approve on 2026-10-24 accepts proposal 544b69a9c6bfd16fabd6c7b008fe364d837903ae and all recorded interaction proposals. Six predefined scopes/resets authorized. Later PROJECT approvals waived; remaining document checkpoints preapproved under autodoc/autoloop. Implementation/package QC not selected.
 - Tracking: documentation and implementation enabled by existing root AGENTS.md. All nine standard issues and native milestone verified before any preparation write. Publication: push/read back every owned commit.
 - Stop: all six passes through final DOCS-008. DOCS-009/package QC, documentation integration and implementation are outside the current automatic range.
@@ -82,6 +82,7 @@ The user approved the published brief and recorded interaction proposals on 2026
 | Pass 1 / DOCS-008 | TASKS SHA-256 da26fd713bda611b9ab1f4dbade3a42607ea7531e46d3496cbac1c486133c7e9; T-001–T-006, one delivery milestone with five implementation tasks plus special phase review. TASKS-REVIEW-REPORT.md records coverage, counts, hierarchy/dependency checks and Ready result. Autodoc preapproval; pass 1 DOCS-008 boundary, next authorized reset to pass 2. |
 | Pass 2 / DOCS-002 | PROJECT.md SHA-256 cc982bc3bb91803121b2a14befbec1ce2f7091e51e70d34a1946c94190464609; Complete current brief includes Hold, ghost, 7-bag, wall kicks, hard drop and interval lock; no conditional visibility/penetrator/configuration adopted yet. Inherited interaction decisions reviewed; no protected delivery changes. Scoped autoloop preapproval applies. |
 | Pass 2 / DOCS-003 | ARCHITECTURE.md SHA-256 9c4237b24e91af4b32914048962c2d1b3efe4e5bd18af68bd6814dcaac1df0b6; Reviewed core ownership of bag/Hold/rotation/landing/lock timing and common ghost/hard-drop projection; browser remains a consumer. Existing inward dependency direction preserved. Scoped autoloop preapproval applies. |
+| Pass 2 / DOCS-004 | DECOMPOSITION.md SHA-256 d25daf16ceabfab852b7ed28e99b1f04f7b5d9d807bed2da517f48f053c6f9e7; Reviewed component interfaces/state additions and reset ownership; source inspect is nonconsuming, projection shared, timers belong to piece. All logical units have deterministic test seams. Scoped autoloop preapproval applies. |
 
 ## Initialization and current reset
 
@@ -95,4 +96,4 @@ The user approved the published brief and recorded interaction proposals on 2026
 
 ## Pending transitions
 
-Publish/read back the current Pass 2 DOCS-003 checkpoint and close/read back issue #3 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.
+Publish/read back the current Pass 2 DOCS-004 checkpoint and close/read back issue #4 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.

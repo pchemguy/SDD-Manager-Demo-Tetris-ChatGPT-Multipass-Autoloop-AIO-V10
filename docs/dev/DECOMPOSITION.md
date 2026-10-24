@@ -28,3 +28,13 @@ Restart replaces engine state and clears pending input/time in the controller; r
 Core input consists of integer action identifiers, nonnegative finite elapsed milliseconds and a random source returning values in [0,1). Invalid time or injected random values produce a defined error without partial transition. Core output is a serializable snapshot with copied board/cell data. Tests can create explicit board fixtures and deterministic piece streams through internal construction seams; no test-only browser globals are part of the player API.
 
 Geometry tests isolate walls/floor/rotation. Engine tests assert board conservation except line removal, simultaneous clears, scoring/progression, spawn failure and restart. Controller tests use fake time and focus events. End-to-end browser tests check actual input delivery, visible output and repeated restart/teardown. Physical owners are defined by layout rather than this logical model.
+
+## Enhanced core responsibilities
+
+- Piece source owns a FIFO of shuffled bags, each containing every kind once; deterministic shuffle input is injectable. It supplies consume and inspect operations without exposing mutable queue storage.
+- Rotation policy consumes current kind/orientation/anchor and candidate legality, then returns the first legal kicked quarter-turn or unchanged placement. Ordered tables are authoritative in SPEC's rotation contract.
+- Landing projection takes board and active placement and returns the last legal row reached by repeated ordinary downward movement; it does not write state. Both ghost and hard-drop commands consume this result.
+- Session engine extends its state with held kind or null, Hold-used flag, grounded-contact timestamp/elapsed and the gravity interval captured at contact. Hold reinitializes orientation/anchor and piece timers, while a real lock resets Hold availability.
+- View snapshot includes held kind, Hold availability and projected ghost cells. Controller maps C/Shift to Hold and Space to hard drop, with discrete-action repeat suppression.
+
+Hold, drop and timer interactions are session rules, not independent services. Unit tests isolate bag permutations, kick order, projection and lock deadline; integration checks prove the displayed ghost agrees with the actual hard-drop result and Hold cannot bypass once-per-lock restriction.
