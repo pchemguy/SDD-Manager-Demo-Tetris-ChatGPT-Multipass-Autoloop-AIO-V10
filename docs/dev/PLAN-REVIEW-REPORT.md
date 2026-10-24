@@ -28,3 +28,16 @@ Scope: Combined PLAN and physical layout; cumulative scope 1. Current source ide
 Combined PLAN/layout recheck: every decomposed owner has a source and test home, no dependency cycle is introduced and build/browser/generated evidence is separate from source. All B01–B05 outcomes have executable physical routes. Phase 1 retains 1 delivery milestone plus 1 excluded special phase-review milestone; narrow integrated baseline rationale remains valid. No PLAN scope change. Ready for TASKS derivation.
 
 Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.
+
+## Revision 2
+
+Scope: PLAN conformance; cumulative scope 2. Current source identities:
+
+- PLAN.md: SHA-256 `0c6036b2c4de6d8ce51981194961187bf4b64ae45d4eb0d3a99077cbca75b2f5`.
+- SPEC.md: SHA-256 `0b31cc98d62e8cf165f5d44f76a0f0403567356509d2e274341fd3fb72af4740`.
+- ARCHITECTURE.md: SHA-256 `9c4237b24e91af4b32914048962c2d1b3efe4e5bd18af68bd6814dcaac1df0b6`.
+- DECOMPOSITION.md: SHA-256 `d25daf16ceabfab852b7ed28e99b1f04f7b5d9d807bed2da517f48f053c6f9e7`.
+
+Coverage: E01/kicks → 2.1; E02 projection/E03–E04 → 2.2; 2.3 reviews combined interactions. Delivery milestone counts: Phase 1=1, Phase 2=2, excluding special reviews. Both small counts reviewed: one cohesive classic outcome; two enhanced control/landing outcomes split by active-piece lifecycle dependency. Six enhancements form one coherent placement-control increment, without unrelated settings. Exact prior PLAN prefix retained, preserving Phase 1 IDs, names, dependencies, scope and exits. Strategy Ready; current layout extension pending.
+
+Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.

@@ -21,3 +21,19 @@ Exit: B01–B05 acceptance, whole-milestone code review, blocker repairs, commit
 ### Milestone 1.2 — Phase review
 
 After milestone 1.1 completion and hosted closure, review the complete baseline and all its exits, run integrated regressions and document remaining nonblocking TODOs. Retain docs/dev/reports/phases/1/PHASE-REPORT.md and HANDOFF. Verify phase scope, build/version readiness and integration prerequisites. Game functionality must remain usable after the verified published merge; release creation follows the authorized lifecycle.
+
+## Phase 2 — Gameplay enhancements
+
+Outcome: deliberate piece selection and landing assistance through Hold, 7-bag, wall kicks, ghost and hard drop with full-interval grounded locking. Included contracts: E01–E04 and relevant retained baseline behavior. Dependency: Phase 1 verified, integrated and published. Target version: 0.2.0. Conditional ghost visibility, penetrator behavior and settings are outside this phase's exits.
+
+### Milestone 2.1 — Predictable piece control
+
+Integrate shuffled bags, ordered wall kicks and Hold into the playable baseline. These controls share active-piece/source state and must remain usable together. Demonstrate an empty/nonempty Hold exchange, a seven-kind bag and wall/floor kick; gather clarity/availability feedback for continue/amend/simplify/stop within authorized scope. Exit: E01 and kick portion of E02, source-consumption/rejection/regression evidence, whole-milestone review/repairs, docs/dev/reports/phases/2/2.1.md and HANDOFF.
+
+### Milestone 2.2 — Landing assistance and grounded timing
+
+Integrate E03 interval timing with hard drop and ghost using one projection. Depends on 2.1 because Hold/rotation create the live-piece transitions the timing policy must handle. Demonstrate preview/drop agreement and visible full delay, including grounded rotation and repeated-drop cases. Exit: E02 projection and E03–E04, all milestone/retained baseline regressions, whole-capability review/repairs, docs/dev/reports/phases/2/2.2.md and HANDOFF.
+
+### Milestone 2.3 — Phase review
+
+After 2.1–2.2 complete/close, review the integrated enhanced game, browser interaction/screenshots, complete core timing/geometry/bag/hold coverage and production build. Retain docs/dev/reports/phases/2/PHASE-REPORT.md, TODOs and HANDOFF; verify version and release/integration readiness before the published complete-phase merge. Prior classic scoring, game-over/restart and focus guarantees remain applicable.
