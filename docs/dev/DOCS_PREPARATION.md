@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested for six predefined cumulative scope passes on 2026-10-24.
 - Delivery mode: strict multipass by default. Later phases/tasks must preserve earlier IDs, names, scope, membership, order, dependencies and exits. No flexible exception granted.
-- Current pass: 5, Session-only game configuration; reset to DOCS-002. Prior scope completed through DOCS-008 at 2735880d05761e37d4b4d2190a3dd7e0b7514f44.
+- Current pass: 5; DOCS-002 accepted locally, publication/issue closure require confirmation below.
 - Approval basis: user response Approve on 2026-10-24 accepts proposal 544b69a9c6bfd16fabd6c7b008fe364d837903ae and all recorded interaction proposals. Six predefined scopes/resets authorized. Later PROJECT approvals waived; remaining document checkpoints preapproved under autodoc/autoloop. Implementation/package QC not selected.
 - Tracking: documentation and implementation enabled by existing root AGENTS.md. All nine standard issues and native milestone verified before any preparation write. Publication: push/read back every owned commit.
 - Stop: all six passes through final DOCS-008. DOCS-009/package QC, documentation integration and implementation are outside the current automatic range.
@@ -107,6 +107,7 @@ The user approved the published brief and recorded interaction proposals on 2026
 | Pass 4 / DOCS-006 | PLAN.md SHA-256 51d67dd3dceec0abeeb7806ce32ef52523c55e03dbd2abca5c051dcdb8c0dc99; Phase 4 appended, bounded to earned ability with explicit safe-placement exits and 0.4.0. Earlier PLAN prefix unchanged. Scoped autoloop preapproval applies. |
 | Pass 4 / DOCS-007 | layout.md SHA-256 8ae5251dfe6fe57a0433d081ad661a2cdf22d082fecb47225dfd79a4618e7873; Mode-aware geometry/landing and engine/view/test owners mapped; combined PLAN/layout review Ready. Scoped autoloop preapproval applies. |
 | Pass 4 / DOCS-008 | TASKS.md SHA-256 3b6a01d95e0d09c8cfd0730b624a8be9799f9dd60ff814b560f83cd3f37a0c1b; T-016–T-020 appended; protected Phase 1–3 ranges unchanged. Current conformance Ready; next reset selects session settings only. Scoped autoloop preapproval applies. |
+| Pass 5 / DOCS-002 | PROJECT.md SHA-256 734c21a5c5ca44dadda4785e1c34ceb47f48c3cf397d338fa4625e20a17aed1d; Six session controls and next preview adopted with accepted defaults and next-piece lock-policy boundary. No cookies/URL persistence in current scope. Scoped autoloop preapproval applies. |
 
 ## Initialization and current reset
 
@@ -120,4 +121,4 @@ The user approved the published brief and recorded interaction proposals on 2026
 
 ## Pending transitions
 
-Publish/read back reset from 2735880d05761e37d4b4d2190a3dd7e0b7514f44; reopen/read back the same DOCS-002–009 issues and verify milestone remains open before current-scope authoring. No implementation authorized.
+Publish/read back the current Pass 5 DOCS-002 checkpoint and close/read back issue #2 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.

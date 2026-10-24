@@ -42,3 +42,9 @@ The ghost is visible when its complete projected piece lies in the lower half of
 ## Penetrator ability
 
 A four-line clear earns one penetrator activation, with at most three stored. A hotkey spends one bonus to let the current piece pass through settled cells until it locks in a fully in-bounds, nonoverlapping position. Hold is unavailable while this ability is active. Hard drop and ghost use the deepest valid destination below blocking cells. Show the active penetrator entirely white, keep ordinary pieces nonwhite, and display one side-panel symbol per available bonus. Restart clears stored bonuses and active ability.
+
+## Player configuration
+
+Provide six side-panel controls: ghost visibility (hide/dynamic/show), hard drop on/off, next-piece preview on/off, hard-drop locking (follow general/immediate), general locking (failed downward attempt/full grounded interval), and Hold on/off. Show a nonconsuming next-piece preview when enabled.
+
+Default to dynamic ghost, enabled hard drop/preview/Hold, full-interval general locking and hard drop following general. Keep settings for the current loaded page, including game restarts; reloading restores defaults. Apply presentation/feature toggles immediately and locking-policy choices to the next spawned piece, preserving the current piece's timing. Active penetration always prevents Hold.
