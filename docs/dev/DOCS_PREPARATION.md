@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested for six predefined cumulative scope passes on 2026-10-24.
 - Delivery mode: strict multipass by default. Later phases/tasks must preserve earlier IDs, names, scope, membership, order, dependencies and exits. No flexible exception granted.
-- Current pass: 1; DOCS-004 accepted locally, publication/issue closure require confirmation below.
+- Current pass: 1; DOCS-005 accepted locally, publication/issue closure require confirmation below.
 - Approval basis: user response Approve on 2026-10-24 accepts proposal 544b69a9c6bfd16fabd6c7b008fe364d837903ae and all recorded interaction proposals. Six predefined scopes/resets authorized. Later PROJECT approvals waived; remaining document checkpoints preapproved under autodoc/autoloop. Implementation/package QC not selected.
 - Tracking: documentation and implementation enabled by existing root AGENTS.md. All nine standard issues and native milestone verified before any preparation write. Publication: push/read back every owned commit.
 - Stop: all six passes through final DOCS-008. DOCS-009/package QC, documentation integration and implementation are outside the current automatic range.
@@ -64,6 +64,7 @@ The user approved the published brief and recorded interaction proposals on 2026
 | Pass 1 / DOCS-002 | Human first approval: response Approve on 2026-10-24; exact PROJECT SHA-256 9ab792074afcd37db09a523909ecbf0d02a70688818c505fd05fab915c232afb retained unchanged from 544b69a. Brief and six-scope interaction decisions accepted; subsequent document checkpoints preapproved. Scope/intent/decision review passed. |
 | Pass 1 / DOCS-003 | ARCHITECTURE SHA-256 0d457971609f3a63ea37a8ac96d984add97431d44deb7e01976c4626cd8d731f; accepted brief mapped to core/coordinator/presentation/adapters. Reviewed unique state ownership, inward dependencies, atomic transitions and deterministic seams; no future features imported. Autodoc preapproval applies. |
 | Pass 1 / DOCS-004 | DECOMPOSITION SHA-256 c6fc0d1107e95ea783f76130a0685238a8a683fd5df6352ec53917de4d1d3d24; geometry/source/session/controller/renderer/status responsibilities reviewed against current architecture. State, error and lifecycle boundaries support independent verification. No unresolved structural decision; autodoc preapproval. |
+| Pass 1 / DOCS-005 | SPEC SHA-256 2c533b9f43681af6cdb57002cf2905d1763897b8d91bf17882194a5dc53a19cc; B01–B05 accepted by scoped preapproval. SPEC-REVIEW-REPORT.md records current design hashes, scope/geometry/time/lifecycle/error review and Ready result. Detailed key/scoring timing choices are delegated agent precision within approved baseline. |
 
 ## Initialization and current reset
 
@@ -77,4 +78,4 @@ The user approved the published brief and recorded interaction proposals on 2026
 
 ## Pending transitions
 
-Publish/read back the current Pass 1 DOCS-004 checkpoint and close/read back issue #4 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.
+Publish/read back the current Pass 1 DOCS-005 checkpoint and close/read back issue #5 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.
