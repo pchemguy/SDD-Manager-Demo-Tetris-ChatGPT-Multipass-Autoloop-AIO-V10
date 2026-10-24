@@ -34,3 +34,9 @@ Pure core tests cover geometry, gravity, clear/scoring and lifecycle. Browser te
 The core owns shuffled bag state, Hold slot/availability, rotation kick evaluation, projected landing and grounded lock timing. Presentation reads this state through the same snapshot, including a Hold display and ghost; it does not calculate a second landing. A pure landing operation computes ordinary collision-limited descent for both ghost and hard drop, preventing preview/action divergence.
 
 The session engine governs piece exchange and grounded lifecycle. Piece-source state advances only when a new queued kind is consumed; Hold swaps do not reseed it. Timer state belongs to the live piece and is discarded on lock or exchange. Geometry remains a pure bounds/occupancy service; rotation policy supplies ordered kick offsets. No browser timer independently locks a piece.
+
+## Penetration and legal settlement
+
+Separate traversal validity from settlement validity in the core. Ordinary traversal requires empty cells; penetrator traversal permits occupied cells but still requires bounds and a reachable legal settlement at or below the candidate. Settlement always requires four in-bounds empty cells. A mode-aware pure projection supplies the same destination to natural descent, hard drop and ghost.
+
+The engine owns the bonus ledger, activation transaction and piece-lifetime ability flag. It recalculates grounding after an ability/movement change and never locks an overlapping intermediate placement. The view maps active ability to white rendering and bonus count to symbols, without changing piece kind or stored board data. The ability ends on lock; settled cells retain the original kind's normal nonwhite color. This keeps white a visible indication of the live ability rather than permanent board state.
