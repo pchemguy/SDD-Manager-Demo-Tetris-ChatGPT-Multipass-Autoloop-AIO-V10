@@ -68,3 +68,17 @@ Scope: SPEC conformance; cumulative scope 5. Current source identities:
 Reviewed C01–C04 against six requested controls and inherited gameplay: exact choices/defaults, immediate toggles versus per-spawn captured policies, no retroactive deadline changes, Hold slot/used preservation and penetration precedence. The 2×2 lock matrix distinguishes a drop placement command from failed one-row down, including zero distance and legal penetrator settlement. Preview is authoritative/nonconsuming across both Hold paths. Session reload defaults and absence of persistence are explicit, testable and scoped; all contract groups have core/model/browser evidence routes.
 
 Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.
+
+## Revision 5
+
+Scope: SPEC conformance; cumulative scope 6. Current source identities:
+
+- SPEC.md: SHA-256 `fe31905b3bd57dc112577f8396e58268a3876e762d73112da83568e66bcff009`.
+- PROJECT.md: SHA-256 `d110ab949032e21471fa173d3190db4f28c1dec1f7597f5d0a69480792262d3b`.
+- ARCHITECTURE.md: SHA-256 `da29b021ccc05c054fb341b41c83feff80344dbab1562102c00f9389d47a5f57`.
+- DECOMPOSITION.md: SHA-256 `cb1c712e6a6081f18f124fc581a4618d76eaa0af75653451e8b20b1b28af2292`.
+- ROTATION.md: SHA-256 `488a09ce575bfe718139082e079c14b50828d27e7302e8de534027f6dfd77e98`.
+
+Reviewed S01–S04 against exact user persistence rules: six independent URL→cookie→default chains, strict invalid fallback, explicit-default cookie writeback and omitted-parameter retention. Startup precedes first spawn; user changes preserve current-piece policy boundaries. Wire schema is complete; per-field writes preserve unrelated URL/cookies and failures are independent/nonfatal. C02 session-only lifetime is explicitly scoped to its delivery phase, while full-game persistence governs current behavior. No gameplay state persistence added. All source/boundary/browser evidence routes are objective; accepted B/E/G/P/C behavior retained.
+
+Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.

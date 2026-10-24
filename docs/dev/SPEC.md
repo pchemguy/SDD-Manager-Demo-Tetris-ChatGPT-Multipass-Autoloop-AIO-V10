@@ -183,3 +183,53 @@ Acceptance: all ghost modes above/below/straddling midline for ordinary and pene
 | C02 | Coordinator, engine spawn and view | Policy snapshots, feature gates, restart/reload lifetime |
 | C03 | Engine/drop/landing | Policy matrix, exact timing, penetration and zero-distance cases |
 | C04 | Renderer, source inspect and status view | Mode predicates, nonconsuming preview and browser output |
+
+## S01 — Configuration wire schema and strict validation
+
+S01–S04 govern persistence for the complete game. They supersede only C02's session-only reload/default/source prohibition; all six controls, live timing boundaries, defaults and gameplay guarantees remain applicable. The session-only delivery phase still has its explicitly scoped C01–C04 exits.
+
+| Internal setting | URL key | Cookie name | Allowed wire values | Default |
+| --- | --- | --- | --- | --- |
+| ghost | ghost | tetris_ghost | hide, dynamic, show | dynamic |
+| hardDrop | hardDrop | tetris_hardDrop | on, off | on |
+| nextPreview | next | tetris_next | on, off | on |
+| dropLock | dropLock | tetris_dropLock | follow, immediate | follow |
+| lock | lock | tetris_lock | failed, interval | interval |
+| hold | hold | tetris_hold | on, off | on |
+
+Names and decoded values are case-sensitive exact strings. Do not trim, coerce truthiness or accept unlisted aliases. Empty, malformed/undecodable and unrecognized values are invalid. Parse URL query values using normal query decoding and take the first occurrence of each recognized key. Ignore unknown keys. Cookie values are percent-encoded on write and decoded safely on read; decode failure invalidates only that field. Use the first exact matching cookie name if duplicate names are present. Defaults and allowlists have one canonical model/codec representation.
+
+## S02 — Independent startup resolution and writeback
+
+Before creating the first live piece or rendering selected controls, resolve each of the six settings independently:
+
+1. Use its valid explicitly supplied URL value, if present.
+2. Otherwise use its valid corresponding saved cookie.
+3. Otherwise use the default from S01.
+
+An invalid explicit URL value falls through to cookie/default for that field; it does not force defaults for other fields. A missing URL key is not an explicit default. Valid explicit URL fields must be saved to their corresponding cookies on initialization, including values equal to defaults. Do not write invalid URL values or write a default merely because a key is absent/invalid. An omitted parameter leaves its saved cookie untouched. Cookie read/write failure does not prevent valid URL resolution. A fresh/reopened page starts a fresh game with these settings, not saved gameplay state.
+
+Acceptance: for every field, verify valid URL over conflicting cookie, valid cookie with omitted URL, default when both absent/invalid, invalid URL with valid-cookie fallback, explicit-default URL overwriting a conflicting cookie, and omitted URL preserving its existing cookie without default writeback. A mixed-origin load must use URL for one field, cookie for another and default for a third at the same time. Invalid data for one setting cannot reset another. Controls and the first piece's captured policies must reflect resolved values from the first frame.
+
+## S03 — User changes, cookies and URL updates
+
+On every valid player selection, apply the selected value to the model and C02's effective boundary, write that setting's cookie and update its query parameter. Selecting a default value still produces explicit persistence. Other cookies/settings remain unchanged. Use host-only cookies with Path=/, Max-Age=31536000 and SameSite=Lax; add Secure on HTTPS. No authentication or gameplay state is stored.
+
+Update the address with history.replaceState, preserving path, origin, existing history state, unrelated parameter names/values (including duplicates) and fragment. Do not navigate, reload or add a history entry. Canonicalize the changed known key to one selected value, leaving other keys untouched. Sequential changes must build on the current address so one change cannot erase another. URL serialization may normalize encoding while preserving unrelated parameter meaning.
+
+Cookie and URL updates are attempted independently after model validation. If either is unavailable, rejected or fails, keep the live setting, attempt the other destination and indicate an unsaved/partially saved setting without crashing, resetting gameplay or claiming durable success. A blocked cookie does not erase an existing cookie or suppress a working URL update. History failure does not suppress cookie writeback. Invalid control values are rejected before either side effect. Stored general/drop policies still affect only the next spawn as defined by C02.
+
+Acceptance: change all six settings and inspect selected model, matching cookie and address; reload and reopen with a conflicting source; preserve unknown query duplicates/fragment and prior history state; change two fields sequentially without losing either; exercise default-value writes and invalid-value no-write. Inject cookie/history failures separately and together, confirming live usability, independent successful effect and truthful persistence status.
+
+## S04 — Persistence interaction and browser acceptance
+
+Persist only the six setting values, never current board, score, random queue, held kind, active penetrator or bonus count. Game restart retains the settings instance; reload resolves sources again and starts B04/P01's fresh game state. Settings controls must show the effective value; failed persistence is distinguishable from a successful saved selection. No localStorage/sessionStorage dependency is required.
+
+Use isolated browser contexts/cookie jars. In both Chromium and Playwright-managed Firefox, exercise initial URL/cookie/default precedence, explicit-default writeback, omitted-key retention, control change updating address/cookie without navigation, and reload restoration before the first active piece. Include ordinary/penetrating play with ghost, drop, Hold and next-preview settings, preserving core random/timer and settlement invariants. Verify cookie names/values/attributes at the browser boundary; assert the HTTPS Secure attribute through the adapter's scheme-specific contract. Failure-path unit/adapter tests supplement actual positive-path reload/browser evidence; do not infer every privacy-policy environment from one successful context.
+
+| Contract | Structural owner | Evidence route |
+| --- | --- | --- |
+| S01 | Settings model/codec | Field schema, decoding, strict allowlists, duplicates and serialization |
+| S02 | Codec/resolver and bootstrap | Per-field/mixed-source matrix, explicit-default and omitted-key writes |
+| S03 | Browser adapter and coordinator | Actual address/cookie changes, independent failures and live timing |
+| S04 | Bootstrap, controls and game consumers | Both-browser reload/reopen, isolated state and gameplay regressions |

@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested for six predefined cumulative scope passes on 2026-10-24.
 - Delivery mode: strict multipass by default. Later phases/tasks must preserve earlier IDs, names, scope, membership, order, dependencies and exits. No flexible exception granted.
-- Current pass: 6; DOCS-004 accepted locally, publication/issue closure require confirmation below.
+- Current pass: 6; DOCS-005 accepted locally, publication/issue closure require confirmation below.
 - Approval basis: user response Approve on 2026-10-24 accepts proposal 544b69a9c6bfd16fabd6c7b008fe364d837903ae and all recorded interaction proposals. Six predefined scopes/resets authorized. Later PROJECT approvals waived; remaining document checkpoints preapproved under autodoc/autoloop. Implementation/package QC not selected.
 - Tracking: documentation and implementation enabled by existing root AGENTS.md. All nine standard issues and native milestone verified before any preparation write. Publication: push/read back every owned commit.
 - Stop: all six passes through final DOCS-008. DOCS-009/package QC, documentation integration and implementation are outside the current automatic range.
@@ -63,7 +63,7 @@ The user approved the published brief and recorded interaction proposals on 2026
 | DOCS-002 | Current pass 6: accepted identity/QC and actual approval basis in Accepted document states below; publication/closure must be reconciled from Git and issue evidence. |
 | DOCS-003 | Current pass 6: accepted identity/QC and actual approval basis in Accepted document states below; publication/closure must be reconciled from Git and issue evidence. |
 | DOCS-004 | Current pass 6: accepted identity/QC and actual approval basis in Accepted document states below; publication/closure must be reconciled from Git and issue evidence. |
-| DOCS-005 | Pass 1 accepted by scoped autodoc preapproval; exact state and QC in Accepted document states. |
+| DOCS-005 | Current pass 6: accepted identity/QC and actual approval basis in Accepted document states below; publication/closure must be reconciled from Git and issue evidence. |
 | DOCS-006 | Pass 1 accepted by scoped autodoc preapproval; exact state and QC in Accepted document states. |
 | DOCS-007 | Pass 1 accepted by scoped autodoc preapproval; exact state and QC in Accepted document states. |
 | DOCS-008 | Pass 1 accepted by scoped autodoc preapproval; exact state and QC in Accepted document states. |
@@ -121,6 +121,7 @@ The user approved the published brief and recorded interaction proposals on 2026
 | Pass 6 / DOCS-002 | PROJECT.md SHA-256 d110ab949032e21471fa173d3190db4f28c1dec1f7597f5d0a69480792262d3b; Complete brief includes per-setting cookie/URL precedence and change persistence. README accurately describes planned scope, not implemented gameplay; S01 schema/failure choices recorded under delegated authority. Scoped autoloop preapproval applies. |
 | Pass 6 / DOCS-003 | ARCHITECTURE.md SHA-256 da29b021ccc05c054fb341b41c83feff80344dbab1562102c00f9389d47a5f57; Persistence isolated at browser boundary; initial values resolved before first spawn and side effects excluded from pure model/core. Per-field writes and failure independence reviewed. Scoped autoloop preapproval applies. |
 | Pass 6 / DOCS-004 | DECOMPOSITION.md SHA-256 cb1c712e6a6081f18f124fc581a4618d76eaa0af75653451e8b20b1b28af2292; Codec/schema, browser adapter and bootstrap responsibilities reviewed; pure validation and per-setting resolution avoid duplicated knowledge and all-or-nothing source selection. Scoped autoloop preapproval applies. |
+| Pass 6 / DOCS-005 | SPEC.md SHA-256 fe31905b3bd57dc112577f8396e58268a3876e762d73112da83568e66bcff009; S01–S04 current conformance Ready; exact per-setting precedence, writeback/lifetime and failure contracts complete. Scoped autoloop preapproval applies. |
 
 ## Initialization and current reset
 
@@ -130,8 +131,9 @@ The user approved the published brief and recorded interaction proposals on 2026
 - Tracking gate: sdd-docs-main milestone 1; DOCS-001–009 issues #1–#9, ordered, exact bundled brief content and milestone associations verified before writes. Standard definitions from repository-bundled SDD Manager v0.15.2.
 - Git baseline: clean template main at 0e4dfbff6d3c6540e2300457878f12d32c131b4e; documentation branch created from published provenance merge cc0c042d00bb42f3171d16da27f03c4aedb794b8. Existing guidance and policies preserved.
 - Credentials: supplied repository credential saved in conventional ignored/untracked file after projection, with effective exclusion verified. No values in tracked records.
+- Publication recovery: automatic approval review interrupted Passes 4–6 over scope/destination context. Checked original six-pass request, approved proposal 544b69a, exact public V10 origin, clean ownership and absence of supplied credential in authored documents. Reconciled only the same published checkpoints/issues; no new destination, implementation, release or package QC selected. Exact commits and closure evidence remain in Git and the original issues.
 - Current reset: 5 → 6; predefined autoloop scope Configuration persistence; user first approval covers reset. Earlier PLAN/TASKS retained unchanged; same issues reopen after this reset publication.
 
 ## Pending transitions
 
-Publish/read back the current Pass 6 DOCS-004 checkpoint and close/read back issue #4 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.
+Publish/read back the current Pass 6 DOCS-005 checkpoint and close/read back issue #5 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.
