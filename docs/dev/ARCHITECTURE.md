@@ -40,3 +40,9 @@ The session engine governs piece exchange and grounded lifecycle. Piece-source s
 Separate traversal validity from settlement validity in the core. Ordinary traversal requires empty cells; penetrator traversal permits occupied cells but still requires bounds and a reachable legal settlement at or below the candidate. Settlement always requires four in-bounds empty cells. A mode-aware pure projection supplies the same destination to natural descent, hard drop and ghost.
 
 The engine owns the bonus ledger, activation transaction and piece-lifetime ability flag. It recalculates grounding after an ability/movement change and never locks an overlapping intermediate placement. The view maps active ability to white rendering and bonus count to symbols, without changing piece kind or stored board data. The ability ends on lock; settled cells retain the original kind's normal nonwhite color. This keeps white a visible indication of the live ability rather than permanent board state.
+
+## Session settings boundary
+
+An application-owned settings value contains only validated choices and starts from defaults at page initialization. HTML form controls emit changes through the coordinator; rendering and command availability consume the current value. The engine snapshots general/drop lock policies when each active piece spawns, including Hold replacement, so later form changes cannot retroactively alter a live deadline.
+
+Settings contain no board/Hold/bonus state and survive engine restart within a page. The core receives typed policy values rather than reading DOM controls. Next preview inspects the authoritative source queue without consuming it. Browser presentation exposes labeled native controls, disabled states and current/next-piece policy feedback. There is no storage, cookie or location dependency in this settings boundary.
