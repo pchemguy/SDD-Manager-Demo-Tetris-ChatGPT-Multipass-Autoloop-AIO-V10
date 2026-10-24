@@ -43,6 +43,12 @@ The engine owns the bonus ledger, activation transaction and piece-lifetime abil
 
 ## Session settings boundary
 
-An application-owned settings value contains only validated choices and starts from defaults at page initialization. HTML form controls emit changes through the coordinator; rendering and command availability consume the current value. The engine snapshots general/drop lock policies when each active piece spawns, including Hold replacement, so later form changes cannot retroactively alter a live deadline.
+An application-owned settings value contains only validated choices and starts from resolved validated values at page initialization. HTML form controls emit changes through the coordinator; rendering and command availability consume the current value. The engine snapshots general/drop lock policies when each active piece spawns, including Hold replacement, so later form changes cannot retroactively alter a live deadline.
 
 Settings contain no board/Hold/bonus state and survive engine restart within a page. The core receives typed policy values rather than reading DOM controls. Next preview inspects the authoritative source queue without consuming it. Browser presentation exposes labeled native controls, disabled states and current/next-piece policy feedback. There is no storage, cookie or location dependency in this settings boundary.
+
+## Persistence adapters and startup ordering
+
+A browser settings-source adapter reads the current URL and cookie string, applies a pure per-field codec/resolver and supplies validated initial settings before the first game is created. Valid explicit URL selections are saved to their cookies during initialization. Application settings remain independent of DOM/storage APIs; the core receives only resolved values and per-piece snapshots.
+
+On user selection, the coordinator commits a valid model update, then asks the adapter to write the corresponding cookie and replace the current URL query value. Cookie and history effects are independent and nonfatal to gameplay. The adapter preserves unrelated parameters/fragment and reports unsaved status instead of falsely claiming success. No gameplay board, score, Hold slot or bonus state is persisted.
