@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested for six predefined cumulative scope passes on 2026-10-24.
 - Delivery mode: strict multipass by default. Later phases/tasks must preserve earlier IDs, names, scope, membership, order, dependencies and exits. No flexible exception granted.
-- Current pass: 6; DOCS-003 accepted locally, publication/issue closure require confirmation below.
+- Current pass: 6; DOCS-004 accepted locally, publication/issue closure require confirmation below.
 - Approval basis: user response Approve on 2026-10-24 accepts proposal 544b69a9c6bfd16fabd6c7b008fe364d837903ae and all recorded interaction proposals. Six predefined scopes/resets authorized. Later PROJECT approvals waived; remaining document checkpoints preapproved under autodoc/autoloop. Implementation/package QC not selected.
 - Tracking: documentation and implementation enabled by existing root AGENTS.md. All nine standard issues and native milestone verified before any preparation write. Publication: push/read back every owned commit.
 - Stop: all six passes through final DOCS-008. DOCS-009/package QC, documentation integration and implementation are outside the current automatic range.
@@ -62,7 +62,7 @@ The user approved the published brief and recorded interaction proposals on 2026
 | DOCS-001 | All four original root files retained byte for byte against initial commit 0e4dfbff6d3c6540e2300457878f12d32c131b4e. No copies needed. Task template copied and only DOCS-001 checked. Separate preparation record/HANDOFF created. Provenance evidence below. Published checkpoint 17f644b2f4983362f28779e4ca8d9cdf28ecc961 matched remote readback; issue #1 closed with evidence and verified completed. |
 | DOCS-002 | Current pass 6: accepted identity/QC and actual approval basis in Accepted document states below; publication/closure must be reconciled from Git and issue evidence. |
 | DOCS-003 | Current pass 6: accepted identity/QC and actual approval basis in Accepted document states below; publication/closure must be reconciled from Git and issue evidence. |
-| DOCS-004 | Pass 1 accepted by scoped autodoc preapproval; exact state and QC in Accepted document states. |
+| DOCS-004 | Current pass 6: accepted identity/QC and actual approval basis in Accepted document states below; publication/closure must be reconciled from Git and issue evidence. |
 | DOCS-005 | Pass 1 accepted by scoped autodoc preapproval; exact state and QC in Accepted document states. |
 | DOCS-006 | Pass 1 accepted by scoped autodoc preapproval; exact state and QC in Accepted document states. |
 | DOCS-007 | Pass 1 accepted by scoped autodoc preapproval; exact state and QC in Accepted document states. |
@@ -120,6 +120,7 @@ The user approved the published brief and recorded interaction proposals on 2026
 | Pass 5 / DOCS-008 | TASKS.md SHA-256 e162de24f628809da74bd7cb2e801e056d8233fba14840583ba8ee9aab5e2ad2; T-021–T-025 appended; protected Phase 1–4 ranges unchanged. Current conformance Ready; next reset selects configuration persistence only. Scoped autoloop preapproval applies. |
 | Pass 6 / DOCS-002 | PROJECT.md SHA-256 d110ab949032e21471fa173d3190db4f28c1dec1f7597f5d0a69480792262d3b; Complete brief includes per-setting cookie/URL precedence and change persistence. README accurately describes planned scope, not implemented gameplay; S01 schema/failure choices recorded under delegated authority. Scoped autoloop preapproval applies. |
 | Pass 6 / DOCS-003 | ARCHITECTURE.md SHA-256 da29b021ccc05c054fb341b41c83feff80344dbab1562102c00f9389d47a5f57; Persistence isolated at browser boundary; initial values resolved before first spawn and side effects excluded from pure model/core. Per-field writes and failure independence reviewed. Scoped autoloop preapproval applies. |
+| Pass 6 / DOCS-004 | DECOMPOSITION.md SHA-256 cb1c712e6a6081f18f124fc581a4618d76eaa0af75653451e8b20b1b28af2292; Codec/schema, browser adapter and bootstrap responsibilities reviewed; pure validation and per-setting resolution avoid duplicated knowledge and all-or-nothing source selection. Scoped autoloop preapproval applies. |
 
 ## Initialization and current reset
 
@@ -133,4 +134,4 @@ The user approved the published brief and recorded interaction proposals on 2026
 
 ## Pending transitions
 
-Publish/read back the current Pass 6 DOCS-003 checkpoint and close/read back issue #3 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.
+Publish/read back the current Pass 6 DOCS-004 checkpoint and close/read back issue #4 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.

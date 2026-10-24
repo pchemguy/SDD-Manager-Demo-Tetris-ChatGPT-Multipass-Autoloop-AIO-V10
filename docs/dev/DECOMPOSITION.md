@@ -56,3 +56,11 @@ Deterministic fixtures cover cavities beneath blockers, invalid bottom rows, rej
 - Next preview reads the source's inspect operation; it never draws randomness, consumes a kind or alters bag boundaries. Hiding the preview affects display only.
 
 Settings unit tests cover every enum/value and default. Engine tests cover lock-policy capture, immediate/follow drop behavior and feature gates; browser tests change controls during ordinary and penetrating play, checking focus isolation, preserved timers, Hold content/availability and preview source identity. Browser settings do not bypass the core's legal-settlement predicate.
+
+## Configuration-source components
+
+- Settings codec owns the one canonical wire schema: field ↔ URL key ↔ cookie name, enum serialization, strict decoded-value validation and per-setting resolution. It returns resolved values and the subset of valid explicit URL fields needing cookie writeback. It has no document/history dependency.
+- Browser settings-source adapter owns reads from location/cookies and writes through cookie/history APIs. Inject read/write functions for deterministic failure tests. It preserves unrelated URL state, writes only the changed field and attempts independent destinations even if one fails.
+- Bootstrap/controller resolves inputs before creating the settings model and initial game; subsequent validated changes update the model first, then request persistence. The view receives selected values and persistence status. Game restart does not reload or reset sources; full page initialization resolves them again.
+
+Do not duplicate defaults or allowlists in controls, codec and cookie parsing. The settings model is canonical for allowed internal values; codec maps their wire forms. Resource/permission failures affect persistence status, not the settled board or running simulation. Source-resolution tests use mixed field origins to expose accidental global precedence; browser tests verify actual reloads, address changes and cookie values.
