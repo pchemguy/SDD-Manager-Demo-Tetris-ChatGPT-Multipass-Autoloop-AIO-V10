@@ -56,3 +56,16 @@ This is the single owning implementation checklist derived from [PLAN](PLAN.md),
         - [ ] T-013 — Review, test and report phase 2
             Depends on: T-009, T-012 and all Phase 2 delivery milestone completion/closure. Scope: whole-phase code review, relevant regressions, blocker repairs, build/version readiness, report and HANDOFF; preserve prior working behavior. Contract: E01–E04 and retained baseline guarantees.
             Evidence: phase exits and actual app/browser evidence reviewed; findings repaired or eligible noncritical TODOs explained; committed docs/dev/reports/phases/2/PHASE-REPORT.md and HANDOFF; integration/release remain subject to their separate gates.
+
+## Phase 3 — Conditional ghost visibility
+
+- [ ] Phase 3 — Conditional ghost visibility
+    - [ ] Milestone 3.1 — Midline-aware ghost
+        - [ ] T-014 — Implement and verify whole-piece midline visibility
+            Depends on: T-013. Scope: browser/renderer.ts, renderer predicate unit fixtures, enhancements browser scenarios, README behavior and 0.3.0 metadata. Contract: G01.
+            Evidence: row-9/row-10, straddling, padding and bidirectional transition fixtures; inspect Canvas screenshots in both browsers and verify hidden/visible drop equivalence.
+            Milestone exit: review the whole capability and dependencies, execute required checks, repair blockers, and commit docs/dev/reports/phases/3/3.1.md plus HANDOFF with this task result and initial completion checkbox. TODO section records None or justified eligible follow-up.
+    - [ ] Milestone 3.2 — Phase review
+        - [ ] T-015 — Review, test and report phase 3
+            Depends on: T-014 and all Phase 3 delivery milestone completion/closure. Scope: whole-phase code review, relevant regressions, blocker repairs, build/version readiness, report and HANDOFF; preserve prior working behavior. Contract: G01 and enhanced gameplay regressions.
+            Evidence: phase exits and actual app/browser evidence reviewed; findings repaired or eligible noncritical TODOs explained; committed docs/dev/reports/phases/3/PHASE-REPORT.md and HANDOFF; integration/release remain subject to their separate gates.
