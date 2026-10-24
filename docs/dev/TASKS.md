@@ -69,3 +69,25 @@ This is the single owning implementation checklist derived from [PLAN](PLAN.md),
         - [ ] T-015 — Review, test and report phase 3
             Depends on: T-014 and all Phase 3 delivery milestone completion/closure. Scope: whole-phase code review, relevant regressions, blocker repairs, build/version readiness, report and HANDOFF; preserve prior working behavior. Contract: G01 and enhanced gameplay regressions.
             Evidence: phase exits and actual app/browser evidence reviewed; findings repaired or eligible noncritical TODOs explained; committed docs/dev/reports/phases/3/PHASE-REPORT.md and HANDOFF; integration/release remain subject to their separate gates.
+
+## Phase 4 — Penetrator mode
+
+- [ ] Phase 4 — Penetrator mode
+    - [ ] Milestone 4.1 — Earned penetrating placement
+        - [ ] T-016 — Implement bonus ledger and activation lifecycle
+            Depends on: T-015. Scope: core engine/types and focused bonus/Hold fixtures. Contract: P01.
+            Evidence: exact four-line award, cap three, activation atomicity, repeat/game-over/no-bonus rejection, Hold prohibition and restart/lock lifecycle pass.
+        - [ ] T-017 — Implement deepest valid penetrator projection
+            Depends on: T-016. Scope: core geometry/landing and deterministic cavity fixtures. Contract: P02.
+            Evidence: scan through blockers, choose lowest legal cavity, handle unusable bottom, reject no-future-destination candidates and preserve ordinary projection.
+        - [ ] T-018 — Integrate penetrator movement and safe grounded locking
+            Depends on: T-016, T-017. Scope: core engine movement/rotation/drop/timer transactions. Contract: P02–P03.
+            Evidence: temporary overlap never locks or destroys cells; activation recalculates contact, all accepted moves retain valid settlement, drop scoring and full delay at deepest destination pass.
+        - [ ] T-019 — Integrate white ability and bonus feedback
+            Depends on: T-016, T-017, T-018. Scope: browser input/renderer/view, penetrator end-to-end tests, README and 0.4.0 metadata. Contract: P01–P04 and G01 interactions.
+            Evidence: actual earn/spend/white traversal/disabled-Hold/ghost/drop/legal-lock/restart sequence passes with inspected Canvas and symbols in both browsers.
+            Milestone exit: review the whole capability and dependencies, execute required checks, repair blockers, and commit docs/dev/reports/phases/4/4.1.md plus HANDOFF with this task result and initial completion checkbox. TODO section records None or justified eligible follow-up.
+    - [ ] Milestone 4.2 — Phase review
+        - [ ] T-020 — Review, test and report phase 4
+            Depends on: T-019 and all Phase 4 delivery milestone completion/closure. Scope: whole-phase code review, relevant regressions, blocker repairs, build/version readiness, report and HANDOFF; preserve prior working behavior. Contract: P01–P04 and retained gameplay/visibility.
+            Evidence: phase exits and actual app/browser evidence reviewed; findings repaired or eligible noncritical TODOs explained; committed docs/dev/reports/phases/4/PHASE-REPORT.md and HANDOFF; integration/release remain subject to their separate gates.

@@ -57,3 +57,21 @@ G01 maps to one cohesive implementation task T-014 affecting one pure renderer p
 Hierarchy checks: 15 unique unchecked implementation/review task IDs; exact four-space phase → milestone → task indentation; all referenced task IDs resolve and sequential dependencies are acyclic. Counts by delivery milestone (special phase review excluded): Phase 1: 5; Phase 2: 3,3; Phase 3: 1. Every phase has one final special review milestone with one task. No standalone delivery-milestone review tasks are required: each phase has one delivery milestone, or each of its multiple delivery milestones contains fewer than four implementation tasks. Final implementation tasks carry whole-milestone review/check/repair/report/HANDOFF obligations. Report and generated output paths are future allocations, not existing-file claims.
 
 Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.
+
+## Revision 4
+
+Scope: TASKS conformance; cumulative scope 4. Current source identities:
+
+- TASKS.md: SHA-256 `3b6a01d95e0d09c8cfd0730b624a8be9799f9dd60ff814b560f83cd3f37a0c1b`.
+- PROJECT.md: SHA-256 `39d4c10b2f1e9b3568dcb5f2608055f7ff14487cd134dcc9176f747f7496eeea`.
+- ARCHITECTURE.md: SHA-256 `ba848d13f5989699b07199cb0ac2c50c20f06afdd4beb3cccbebfb6e09df7865`.
+- DECOMPOSITION.md: SHA-256 `cb4602b497e757c27d86533a29a711d0080c5fb93a5e516aa508473739d12ff3`.
+- SPEC.md: SHA-256 `5ef9daecde3ddfba60012414f802fffabbc0414b029b18fe480a8c5a2a68593f`.
+- PLAN.md: SHA-256 `51d67dd3dceec0abeeb7806ce32ef52523c55e03dbd2abca5c051dcdb8c0dc99`.
+- layout.md: SHA-256 `8ae5251dfe6fe57a0433d081ad661a2cdf22d082fecb47225dfd79a4618e7873`.
+
+P01–P04 map to four coherent implementation tasks: ledger/lifecycle, projection, safe motion/contact and consuming browser delivery. Phase 4 has only one implementation milestone, so T-019 folds whole-milestone review/report/HANDOFF despite four delivery tasks; T-020 remains a separate special phase review. Earlier T-001–T-015 scopes, order and parentage are byte-identical. Prior one-task visibility milestone remains intentionally narrow, without padding.
+
+Hierarchy checks: 20 unique unchecked implementation/review task IDs; exact four-space phase → milestone → task indentation; all referenced task IDs resolve and sequential dependencies are acyclic. Counts by delivery milestone (special phase review excluded): Phase 1: 5; Phase 2: 3,3; Phase 3: 1; Phase 4: 4. Every phase has one final special review milestone with one task. No standalone delivery-milestone review tasks are required: each phase has one delivery milestone, or each of its multiple delivery milestones contains fewer than four implementation tasks. Final implementation tasks carry whole-milestone review/check/repair/report/HANDOFF obligations. Report and generated output paths are future allocations, not existing-file claims.
+
+Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.
