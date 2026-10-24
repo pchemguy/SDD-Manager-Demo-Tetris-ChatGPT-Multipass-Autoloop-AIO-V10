@@ -1,8 +1,8 @@
 # Project handoff
 
-Checkpoint: main documentation completion of cumulative scope 2, DOCS-008 boundary.
+Checkpoint: main documentation reset to cumulative scope 3, DOCS-002 next.
 
-Outcome: scope 2 documented through TASKS with per-document QC; no implementation or whole-package QC claimed.
+Outcome: retained prior documents and all protected PLAN/TASKS ranges; current-scope acceptance/QC pending.
 
 ## Workflow and sources
 
@@ -26,5 +26,5 @@ Outcome: scope 2 documented through TASKS with per-document QC; no implementatio
 
 ## Pending work and next action
 
-- DOCS-008 completion commit publication and issue #8 closure require readback. After those effects, reset to scope 3.
+- Reset commit publication and same eight issue reopen/readbacks pending; do not author scope 3 documents before these settle.
 - Recover actual later progress from DOCS_PREPARATION and Git. No implementation range is authorized.
