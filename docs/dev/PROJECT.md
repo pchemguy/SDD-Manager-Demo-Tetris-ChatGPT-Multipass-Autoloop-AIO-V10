@@ -1,0 +1,36 @@
+# Browser Tetris
+
+## Purpose and users
+
+Build a playable single-player Tetris game for desktop browser users who want a short keyboard-controlled game without an account or server. A player can open the game, understand its controls, play until game over and immediately start another game.
+
+## Intended outcome
+
+Provide responsive, predictable falling-piece gameplay with a readable board, score and game-over feedback. Keep gameplay rules independently testable and make the game deliverable as static browser assets.
+
+## Principal scope
+
+- A 10-column by 20-row visible board and the seven standard tetromino shapes.
+- One falling piece at a time, automatic downward gravity, left/right movement, player-controlled rotation and accelerated downward movement.
+- Collision and board-boundary checks; a piece settles when a downward movement attempt fails.
+- Complete horizontal rows clear together, remaining rows fall, and the score reflects the number of lines cleared. Gravity accelerates as progress increases.
+- Game over when the next piece cannot spawn in a valid position. Restart clears the board, score and progression and starts a fresh game.
+- Visible score, progression, controls, game-over state and restart control. Gameplay keys do not scroll the page while the game has focus.
+
+Pieces are selected independently with equal probability. Rotation rejects positions that collide or leave the board. These rules keep the playable game small and coherent.
+
+## Proposed delivery constraints
+
+Use TypeScript, a Canvas game board and semantic HTML status and controls, with no application backend. Keep simulation time and piece selection controllable for deterministic automated checks. Production assets run in the browser without a server-side runtime.
+
+Use keyboard input as the primary interaction. Keep instructions and status readable, distinguish regular pieces using nonwhite colors, and give interactive HTML controls visible focus. Freeze gameplay time when the page is inactive so returning does not unexpectedly advance the game.
+
+Verify core rules and representative gameplay in isolated Chromium headless shell and Playwright-managed Firefox environments, following the repository browser policy. Exact build/test package choices and input mappings remain for architecture and specification.
+
+## Non-goals
+
+Online multiplayer, accounts, backend leaderboards and mobile touch controls are outside this project's intended scope. No third-party Tetris branding or proprietary game assets are required.
+
+## Success criteria
+
+A user can start a game, move and rotate pieces, let gravity settle them, clear rows, observe score and speed progression, reach game over and restart without reloading. Rules remain consistent at walls, floor, stacked cells and spawn boundaries. Automated rule tests and browser interaction/rendering checks demonstrate that behavior; document preparation alone establishes no implementation claim.

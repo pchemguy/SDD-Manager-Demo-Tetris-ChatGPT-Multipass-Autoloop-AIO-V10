@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested for six predefined cumulative scope passes on 2026-10-24.
 - Delivery mode: strict multipass by default. Later phases/tasks must preserve earlier IDs, names, scope, membership, order, dependencies and exits. No flexible exception granted.
-- Current pass: 1, playable classic baseline. DOCS-001 initialization complete locally; publication and issue closure require confirmation before DOCS-002.
+- Current pass: 1, playable classic baseline. DOCS-001 initialization published and issue #1 closure verified. DOCS-002 Pass 1 PROJECT proposed; first human approval pending.
 - Approval basis: first PROJECT approval remains required. Later PROJECT approvals are waived, announced before this checkpoint; ARCHITECTURE through TASKS checkpoints are preapproved by the selected mode. First approval will authorize the agreed scope sequence and automatic resets; it has not yet occurred.
 - Tracking: documentation and implementation enabled by existing root AGENTS.md. All nine standard issues and native milestone verified before any preparation write. Publication: push/read back every owned commit.
 - Stop: first PROJECT proposal approval, then all six passes through final DOCS-008. DOCS-009/package QC, documentation integration and implementation are outside the current automatic range.
@@ -52,8 +52,8 @@ These are agent proposals for the first human PROJECT/sequence approval, not use
 
 | Task | Current evidence / decision basis |
 | --- | --- |
-| DOCS-001 | All four original root files retained byte for byte against initial commit 0e4dfbff6d3c6540e2300457878f12d32c131b4e. No copies needed. Task template copied and only DOCS-001 checked. Separate preparation record/HANDOFF created. Provenance evidence below. Publication and issue closure pending readback. |
-| DOCS-002 | Pass 1 PROJECT proposal not yet submitted or approved. |
+| DOCS-001 | All four original root files retained byte for byte against initial commit 0e4dfbff6d3c6540e2300457878f12d32c131b4e. No copies needed. Task template copied and only DOCS-001 checked. Separate preparation record/HANDOFF created. Provenance evidence below. Published checkpoint 17f644b2f4983362f28779e4ca8d9cdf28ecc961 matched remote readback; issue #1 closed with evidence and verified completed. |
+| DOCS-002 | Pass 1 PROJECT proposed at docs/dev/PROJECT.md, SHA-256 9ab792074afcd37db09a523909ecbf0d02a70688818c505fd05fab915c232afb; approval pending. Scope and document-boundary review passed: classic baseline only, no future enhancements imported, principal intent/scope/non-goals and proposed technology/verification choices visible. Local README links and original root-file preservation checked; no game code/tests executed. First approval also confirms proposed per-pass/cross-scope decisions for the six supplied scopes. DOCS-002 remains unchecked and issue #2 remains open. |
 | DOCS-003–008 | Not started; downstream of first PROJECT approval. |
 | DOCS-009 | Not selected by autodoc/autoloop range. |
 
@@ -69,4 +69,4 @@ These are agent proposals for the first human PROJECT/sequence approval, not use
 
 ## Pending transitions
 
-Publish/read back this initialization checkpoint, then add evidence and close/read back DOCS-001 issue #1. Prepare and publish PROJECT proposal with README links; leave DOCS-002 unchecked and issue #2 open until first human approval. No implementation authorized.
+Publish/read back the PROJECT proposal checkpoint, then await first human PROJECT and scope-decision approval. Keep DOCS-002 unchecked and issue #2 open. On approval, commit the exact accepted brief with approval evidence and the checked DOCS-002, push/read back and close/read back #2 before ARCHITECTURE. Run the remaining agreed autoloop document passes only after that boundary. No implementation authorized.
