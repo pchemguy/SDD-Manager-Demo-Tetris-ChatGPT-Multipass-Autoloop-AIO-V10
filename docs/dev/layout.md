@@ -32,3 +32,9 @@ Milestone reports belong at docs/dev/reports/phases/<phase>/<milestone>.md and p
 Ordered rotation policy/tables live in src/core/rotation.ts with tests/unit/rotation.test.ts. Shared landing projection lives in src/core/landing.ts with tests/unit/landing.test.ts. Piece-source bag/inspect behavior belongs in src/core/random.ts; Hold and lock timers remain in src/core/engine.ts and types.ts rather than browser state. Their boundary fixtures extend tests/unit/random.test.ts and engine.test.ts.
 
 Hold display and ghost drawing extend browser/view.ts and renderer.ts; action bindings extend browser/input.ts. Browser assist scenarios live in tests/e2e/enhancements.spec.ts. The normative kick child is docs/dev/spec/ROTATION.md. No second landing implementation belongs in a view or test helper; test fixtures assert the production projection result through defined seams.
+
+## Penetrator ownership
+
+Keep mode-aware traversal/settlement predicates in src/core/geometry.ts and deepest valid destination in src/core/landing.ts. Bonus count, active flag, movement/contact/lock transactions stay in src/core/engine.ts and types.ts; no second ability state store is needed. Focused fixtures extend unit geometry/landing/engine tests, with cavity/blocked-floor boards in tests/fixtures/.
+
+P binding, white active/ghost rendering and bonus/Hold-disabled status extend existing input.ts, renderer.ts and view.ts. Actual ability scenarios belong in tests/e2e/penetrator.spec.ts. Board fixtures can construct bonus/stack state through core test seams; production exports no unguarded player-facing test hook.
