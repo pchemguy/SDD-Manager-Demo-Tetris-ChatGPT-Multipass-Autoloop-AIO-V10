@@ -68,3 +68,17 @@ Scope: PLAN conformance; cumulative scope 3. Current source identities:
 Coverage: G01 → 3.1 with phase integration review at 3.2. Delivery milestone counts: Phase 1=1, Phase 2=2, Phase 3=1; special phase reviews excluded. Small-group assessment: Phase 3 is a single bounded user-visible policy requiring no new subsystem; splitting or merging into an earlier protected phase would add overhead or violate strict delivery preservation. Existing Phase 1/2 ranges remain byte-identical. Strategy Ready, unchanged physical placement requires current recheck.
 
 Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.
+
+## Revision 5
+
+Scope: PLAN conformance; cumulative scope 3. Current source identities:
+
+- PLAN.md: SHA-256 `7f32a9e05dd683e829571be8335dc4232ade3212562ea1e5ebced7cdba82ad8b`.
+- SPEC.md: SHA-256 `3a01580314e244aca554cd2faa6078aa14ff28d2ae3bc34f925dbddadcb9edb9`.
+- ARCHITECTURE.md: SHA-256 `9c4237b24e91af4b32914048962c2d1b3efe4e5bd18af68bd6814dcaac1df0b6`.
+- DECOMPOSITION.md: SHA-256 `d25daf16ceabfab852b7ed28e99b1f04f7b5d9d807bed2da517f48f053c6f9e7`.
+- layout.md: SHA-256 `51692ccaa2b29020e85b99103506b948455ad7d3d152b0c98fdd2a670e294df8`.
+
+Combined PLAN/layout recheck: renderer.ts and renderer-focused unit fixtures plus enhancements.spec.ts already provide the appropriate homes for the pure visibility predicate and screenshot integration. No extra module/path is needed. Current component ownership and G01 delivery route are complete; all prior physical allocations remain valid. Delivery milestone counts 1/2/1 remain justified; Ready for TASKS.
+
+Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.
