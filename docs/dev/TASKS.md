@@ -91,3 +91,25 @@ This is the single owning implementation checklist derived from [PLAN](PLAN.md),
         - [ ] T-020 — Review, test and report phase 4
             Depends on: T-019 and all Phase 4 delivery milestone completion/closure. Scope: whole-phase code review, relevant regressions, blocker repairs, build/version readiness, report and HANDOFF; preserve prior working behavior. Contract: P01–P04 and retained gameplay/visibility.
             Evidence: phase exits and actual app/browser evidence reviewed; findings repaired or eligible noncritical TODOs explained; committed docs/dev/reports/phases/4/PHASE-REPORT.md and HANDOFF; integration/release remain subject to their separate gates.
+
+## Phase 5 — Session-only game configuration
+
+- [ ] Phase 5 — Session-only game configuration
+    - [ ] Milestone 5.1 — Configurable session play
+        - [ ] T-021 — Implement validated session settings model
+            Depends on: T-020. Scope: app/settings.ts, controller page-lifetime ownership and model unit tests. Contract: C01–C02.
+            Evidence: six defaults/allowlists, independent atomic updates, invalid no-op and restart-versus-reload lifetime pass without reading/writing storage or URL.
+        - [ ] T-022 — Implement captured lock policies and feature gates
+            Depends on: T-021. Scope: core engine/types and settings-controller integration. Contract: C02–C03.
+            Evidence: next-spawn policy capture, current-deadline stability, 2×2 lock matrix, zero-distance drop, enabled/disabled commands and penetrating-Hold precedence pass.
+        - [ ] T-023 — Integrate ghost options and nonconsuming next preview
+            Depends on: T-021, T-022. Scope: renderer/view and source inspect consumers with model/core fixtures. Contract: C04.
+            Evidence: all three ghost modes with regular/penetrating projection, preview identity through draws and both Hold paths, and zero random consumption from repeated presentation toggles pass.
+        - [ ] T-024 — Deliver accessible six-setting session panel
+            Depends on: T-021, T-022, T-023. Scope: browser/settings-view.ts, input focus integration, settings end-to-end tests, README and 0.5.0 metadata. Contract: C01–C04.
+            Evidence: six controls, pending next-piece explanation, focus isolation, settings during game over, restart retention/reload defaults and prior gameplay pass both browsers with inspected output.
+            Milestone exit: review the whole capability and dependencies, execute required checks, repair blockers, and commit docs/dev/reports/phases/5/5.1.md plus HANDOFF with this task result and initial completion checkbox. TODO section records None or justified eligible follow-up.
+    - [ ] Milestone 5.2 — Phase review
+        - [ ] T-025 — Review, test and report phase 5
+            Depends on: T-024 and all Phase 5 delivery milestone completion/closure. Scope: whole-phase code review, relevant regressions, blocker repairs, build/version readiness, report and HANDOFF; preserve prior working behavior. Contract: C01–C04 and retained B/E/G/P guarantees.
+            Evidence: phase exits and actual app/browser evidence reviewed; findings repaired or eligible noncritical TODOs explained; committed docs/dev/reports/phases/5/PHASE-REPORT.md and HANDOFF; integration/release remain subject to their separate gates.
