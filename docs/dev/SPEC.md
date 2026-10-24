@@ -92,3 +92,11 @@ Show Hold status and ghost with updated control instructions. Browser acceptance
 | E02 | Rotation policy, Geometry, Landing projection | Tables, deterministic candidate selection, ghost/drop identity |
 | E03 | Session engine and controller clock | Exact deadlines, reset/no-reset, active-time partition and lifecycle |
 | E04 | Session/controller/input/rendering | Actual drop/hold controls, scoring and inspected game output |
+
+## G01 — Conditional ghost visibility
+
+G01 governs the complete game's ghost visibility instead of E02's unconditional presentation. With rows 0–19 and the midline between rows 9 and 10, show the ghost exactly when min(projected occupied-cell row) ≥ 10. Matrix padding, active-piece height, anchor row and centroid do not determine eligibility. If any occupied projected cell is in rows 0–9, hide the entire ghost; a straddling projection is hidden. Recompute from the authoritative landing after every relevant board/piece/orientation transition. If eligibility becomes true, show it again immediately on the next render. E02's coincident-piece legibility treatment remains applicable.
+
+The predicate is pure; hiding the ghost does not change collision, hard-drop destination, score, lock timing, piece-source state or input. No separate visibility setting is part of this contract.
+
+Acceptance: fixtures with uppermost projected cell at 9 versus 10 produce hide versus show; a straddling vertical I is hidden; an anchor/padding cell above 10 with all occupied cells below still shows; upper/lower transitions restore visibility both ways. Browser scenarios inspect the Canvas output and verify identical drop landing whether the ghost is visible or hidden. Responsible components: Landing projection (cells), Board renderer (predicate and drawing).
