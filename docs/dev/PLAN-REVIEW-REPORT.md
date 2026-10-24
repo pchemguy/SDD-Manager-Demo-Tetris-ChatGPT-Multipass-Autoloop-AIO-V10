@@ -82,3 +82,16 @@ Scope: PLAN conformance; cumulative scope 3. Current source identities:
 Combined PLAN/layout recheck: renderer.ts and renderer-focused unit fixtures plus enhancements.spec.ts already provide the appropriate homes for the pure visibility predicate and screenshot integration. No extra module/path is needed. Current component ownership and G01 delivery route are complete; all prior physical allocations remain valid. Delivery milestone counts 1/2/1 remain justified; Ready for TASKS.
 
 Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.
+
+## Revision 6
+
+Scope: PLAN conformance; cumulative scope 4. Current source identities:
+
+- PLAN.md: SHA-256 `51d67dd3dceec0abeeb7806ce32ef52523c55e03dbd2abca5c051dcdb8c0dc99`.
+- SPEC.md: SHA-256 `5ef9daecde3ddfba60012414f802fffabbc0414b029b18fe480a8c5a2a68593f`.
+- ARCHITECTURE.md: SHA-256 `ba848d13f5989699b07199cb0ac2c50c20f06afdd4beb3cccbebfb6e09df7865`.
+- DECOMPOSITION.md: SHA-256 `cb4602b497e757c27d86533a29a711d0080c5fb93a5e516aa508473739d12ff3`.
+
+P01–P04 map to 4.1 and independent whole-phase review 4.2. Delivery milestone counts: 1/2/1/1 for Phases 1–4, excluding review milestones. Small-count review retains one Phase 4 delivery milestone: ledger, geometry and rendering are bounded collaborators of one safe ability, not separate user outcomes; splitting would expose unsafe partial penetration. All prior phase text/IDs/exits retained byte for byte. Strategy Ready; geometry/landing/view physical ownership requires current recheck.
+
+Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.

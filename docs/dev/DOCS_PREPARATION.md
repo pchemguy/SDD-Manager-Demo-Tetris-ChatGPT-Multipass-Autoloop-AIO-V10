@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested for six predefined cumulative scope passes on 2026-10-24.
 - Delivery mode: strict multipass by default. Later phases/tasks must preserve earlier IDs, names, scope, membership, order, dependencies and exits. No flexible exception granted.
-- Current pass: 4; DOCS-005 accepted locally, publication/issue closure require confirmation below.
+- Current pass: 4; DOCS-006 accepted locally, publication/issue closure require confirmation below.
 - Approval basis: user response Approve on 2026-10-24 accepts proposal 544b69a9c6bfd16fabd6c7b008fe364d837903ae and all recorded interaction proposals. Six predefined scopes/resets authorized. Later PROJECT approvals waived; remaining document checkpoints preapproved under autodoc/autoloop. Implementation/package QC not selected.
 - Tracking: documentation and implementation enabled by existing root AGENTS.md. All nine standard issues and native milestone verified before any preparation write. Publication: push/read back every owned commit.
 - Stop: all six passes through final DOCS-008. DOCS-009/package QC, documentation integration and implementation are outside the current automatic range.
@@ -102,6 +102,7 @@ The user approved the published brief and recorded interaction proposals on 2026
 | Pass 4 / DOCS-003 | ARCHITECTURE.md SHA-256 ba848d13f5989699b07199cb0ac2c50c20f06afdd4beb3cccbebfb6e09df7865; Traversal/settlement predicates and shared mode-aware projection keep settled-cell preservation explicit. White rendering is derived from live ability; core piece identity remains stable. Grounding recalculates on activation. Scoped autoloop preapproval applies. |
 | Pass 4 / DOCS-004 | DECOMPOSITION.md SHA-256 cb4602b497e757c27d86533a29a711d0080c5fb93a5e516aa508473739d12ff3; Reviewed engine ledger/flag ownership, separate Geometry predicates, projection scanning, timer integration and derived view state; no circular dependency or duplicated placement rule. Scoped autoloop preapproval applies. |
 | Pass 4 / DOCS-005 | SPEC.md SHA-256 5ef9daecde3ddfba60012414f802fffabbc0414b029b18fe480a8c5a2a68593f; P01–P04 conformance Ready; traversal and settlement safety, bonus accounting and white rendering explicit. Scoped autoloop preapproval applies. |
+| Pass 4 / DOCS-006 | PLAN.md SHA-256 51d67dd3dceec0abeeb7806ce32ef52523c55e03dbd2abca5c051dcdb8c0dc99; Phase 4 appended, bounded to earned ability with explicit safe-placement exits and 0.4.0. Earlier PLAN prefix unchanged. Scoped autoloop preapproval applies. |
 
 ## Initialization and current reset
 
@@ -115,4 +116,4 @@ The user approved the published brief and recorded interaction proposals on 2026
 
 ## Pending transitions
 
-Publish/read back the current Pass 4 DOCS-005 checkpoint and close/read back issue #5 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.
+Publish/read back the current Pass 4 DOCS-006 checkpoint and close/read back issue #6 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.

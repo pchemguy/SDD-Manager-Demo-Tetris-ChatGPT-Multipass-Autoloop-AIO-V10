@@ -49,3 +49,15 @@ Implement the pure projected-cell visibility predicate in the renderer, integrat
 ### Milestone 3.2 — Phase review
 
 After 3.1 completes/closes, review visibility integration, regressions and build/version readiness. Retain docs/dev/reports/phases/3/PHASE-REPORT.md, TODOs and HANDOFF; verify complete-phase integration/release prerequisites while preserving Phase 2 gameplay.
+
+## Phase 4 — Penetrator mode
+
+Outcome: earned, capped activations let the current piece cross a stack and settle legally, with trustworthy ghost/drop and clear white/bonus feedback. Included contracts: P01–P04 and relevant B/E/G regressions. Dependency: Phase 3 verified, integrated and published. Target version: 0.4.0. Configuration/persistence are outside this phase's exits.
+
+### Milestone 4.1 — Earned penetrating placement
+
+Implement the bonus/activation ledger, deepest legal projection, mode-aware movement/grounding/locking and live presentation as one integrated ability. These responsibilities have separate test seams but one meaningful usable outcome; isolated traversal without safe settlement is not delivery. Demonstrate four-line earn, activation, traversal under blockers, matching preview/drop and legal delayed lock; gather feedback on ability/bonus/disabled-Hold clarity for continue/amend/simplify/stop. Exit: P01–P04 core/both-browser evidence, ordinary projection/scoring/Hold/visibility regressions, complete milestone code review/repairs, docs/dev/reports/phases/4/4.1.md and HANDOFF.
+
+### Milestone 4.2 — Phase review
+
+After 4.1 completes/closes, review the integrated ability and all legal-placement/lifecycle invariants, actual white rendering, cap/earn/spend and browser/build/version evidence. Retain docs/dev/reports/phases/4/PHASE-REPORT.md, TODOs and HANDOFF; verify complete-phase integration/release readiness without weakening prior behavior.
