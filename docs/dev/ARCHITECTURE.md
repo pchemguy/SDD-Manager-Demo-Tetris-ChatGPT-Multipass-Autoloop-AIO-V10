@@ -28,3 +28,9 @@ Canvas provides a small predictable board-drawing surface; semantic HTML carries
 Immutable external snapshots prevent view code from mutating the board. Internal data representation may use copied arrays or controlled mutation behind the core API; externally visible transitions remain atomic. Reject invalid player actions without partial mutation. Injected clocks and random streams make boundary behavior reproducible.
 
 Pure core tests cover geometry, gravity, clear/scoring and lifecycle. Browser tests exercise focus, keyboard delivery, Canvas output, status and restart through the actual built application in the required isolated browser matrix. Design seams do not substitute for browser evidence.
+
+## Placement assistance and piece supply
+
+The core owns shuffled bag state, Hold slot/availability, rotation kick evaluation, projected landing and grounded lock timing. Presentation reads this state through the same snapshot, including a Hold display and ghost; it does not calculate a second landing. A pure landing operation computes ordinary collision-limited descent for both ghost and hard drop, preventing preview/action divergence.
+
+The session engine governs piece exchange and grounded lifecycle. Piece-source state advances only when a new queued kind is consumed; Hold swaps do not reseed it. Timer state belongs to the live piece and is discarded on lock or exchange. Geometry remains a pure bounds/occupancy service; rotation policy supplies ordered kick offsets. No browser timer independently locks a piece.
