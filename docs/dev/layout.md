@@ -44,3 +44,9 @@ P binding, white active/ghost rendering and bonus/Hold-disabled status extend ex
 The typed settings/default/validation model belongs in src/app/settings.ts with tests/unit/settings.test.ts. Its lifecycle is coordinated by controller.ts; core engine/types own captured live-piece policies, and core tests exercise policy combinations without browser globals. Session setting updates do not import storage APIs.
 
 Native controls and selected/pending policy feedback belong in src/browser/settings-view.ts; input.ts excludes their focus from gameplay bindings. Next display extends view.ts using random.ts inspect; ghost options extend renderer.ts. Six-control/lifetime/focus scenarios belong in tests/e2e/settings.spec.ts, with source-consumption and lock-matrix unit fixtures beside their core/model owners. No cookie/location source module is required for this session scope.
+
+## Persistent configuration ownership
+
+The canonical wire schema/codec/resolver belongs in src/app/settings-codec.ts with tests/unit/settings-codec.test.ts, consuming settings.ts defaults/allowlists. Browser cookie/location/history effects belong in src/browser/settings-storage.ts with tests/unit/settings-storage.test.ts using injected adapters. Bootstrap/controller performs resolution before model/game creation and persistence after validated changes.
+
+Actual query/cookie/reload scenarios belong in tests/e2e/persistence.spec.ts with isolated contexts. Do not create tracked real-user cookie dumps, tokens, browser profiles or current-location logs. README documents the six public query keys and precedence when implemented/verified. Root RELEASE-NOTES.md owns final user-facing release notes; version metadata belongs in package.json and its lockfile once implementation establishes them. Final implementation evidence belongs in docs/dev/reports/IMPLEMENTATION-REPORT.md; earlier milestone/phase report paths remain unchanged.

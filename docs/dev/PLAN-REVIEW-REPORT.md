@@ -149,3 +149,17 @@ Scope: PLAN conformance; cumulative scope 6. Current source identities:
 S01/schema/resolver, S02 startup/writeback and S03 effects/failures map to 6.1, with S04 browser integration and final phase review 6.2. Delivery milestone counts: 1/2/1/1/1/1 across six phases, special reviews excluded. One final persistence milestone is cohesive and bounded to six settings, with no saved-game/backend backlog. All earlier phase IDs, scope, milestone membership/order, dependencies and exits are byte-identical. Versions 0.1.0–0.6.0 align with coherent delivered increments. Strategy Ready pending current physical placement review.
 
 Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.
+
+## Revision 11
+
+Scope: PLAN conformance; cumulative scope 6. Current source identities:
+
+- PLAN.md: SHA-256 `d2430430f649e5cfe6860d54ee781dbfa5623f4d10e304392af58115086cedc2`.
+- SPEC.md: SHA-256 `fe31905b3bd57dc112577f8396e58268a3876e762d73112da83568e66bcff009`.
+- ARCHITECTURE.md: SHA-256 `da29b021ccc05c054fb341b41c83feff80344dbab1562102c00f9389d47a5f57`.
+- DECOMPOSITION.md: SHA-256 `cb1c712e6a6081f18f124fc581a4618d76eaa0af75653451e8b20b1b28af2292`.
+- layout.md: SHA-256 `55994fd91aefe678a39b231aa07c8231601f85bfc7a58898eb1cb945fab031c0`.
+
+Combined review maps codec/model, effect adapter, bootstrap and browser persistence scenarios to distinct homes; no DOM/storage dependency enters the core. All six phase delivery routes and physical owners remain coherent. The six narrow-to-substantive outcome boundaries preserve earlier working behavior; no quota-padding milestone/task introduced. Complete S01–S04 placement coverage and current hashes support TASKS derivation. Earlier PLAN ranges unchanged.
+
+Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.
