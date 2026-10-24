@@ -61,3 +61,15 @@ Implement the bonus/activation ledger, deepest legal projection, mode-aware move
 ### Milestone 4.2 — Phase review
 
 After 4.1 completes/closes, review the integrated ability and all legal-placement/lifecycle invariants, actual white rendering, cap/earn/spend and browser/build/version evidence. Retain docs/dev/reports/phases/4/PHASE-REPORT.md, TODOs and HANDOFF; verify complete-phase integration/release readiness without weakening prior behavior.
+
+## Phase 5 — Session-only game configuration
+
+Outcome: six usable side-panel settings and nonconsuming next preview customize play within the loaded page. Included contracts: C01–C04 and retained gameplay/ability/visibility regressions. Dependency: Phase 4 verified, integrated and published. Target version: 0.5.0. Persistence is outside this phase's exits; reload must use defaults even if query/cookie values exist.
+
+### Milestone 5.1 — Configurable session play
+
+Implement the typed settings model, piece-spawn lock policy capture and command gates, nonconsuming preview and accessible side-panel controls. Demonstrate all six controls during ordinary/penetrating play and show that live lock policies stay stable until next spawn. Gather feedback on defaults, control focus and next-piece policy explanation for continue/amend/simplify/stop. Exit: C01–C04 model/engine/browser matrix, reload/restart lifetime checks, nonconsuming source and prior regressions, whole-milestone review/repairs, docs/dev/reports/phases/5/5.1.md and HANDOFF. One coherent milestone keeps settings, their application and feedback integrated.
+
+### Milestone 5.2 — Phase review
+
+After 5.1 completes/closes, review six-setting usability, policy combinations, ability interactions and absence of persistence effects, with both-browser output and build/version evidence. Retain docs/dev/reports/phases/5/PHASE-REPORT.md, TODOs and HANDOFF; verify complete-phase integration/release prerequisites.
