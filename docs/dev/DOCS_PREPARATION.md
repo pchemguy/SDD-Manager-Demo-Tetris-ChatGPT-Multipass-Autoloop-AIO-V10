@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested for six predefined cumulative scope passes on 2026-10-24.
 - Delivery mode: strict multipass by default. Later phases/tasks must preserve earlier IDs, names, scope, membership, order, dependencies and exits. No flexible exception granted.
-- Current pass: 1; DOCS-008 accepted locally, publication/issue closure require confirmation below.
+- Current pass: 2, Gameplay enhancements; reset to DOCS-002. Prior scope completed through DOCS-008 at f4b41b3a7dfe236a8b40fe723e83afde37707f35.
 - Approval basis: user response Approve on 2026-10-24 accepts proposal 544b69a9c6bfd16fabd6c7b008fe364d837903ae and all recorded interaction proposals. Six predefined scopes/resets authorized. Later PROJECT approvals waived; remaining document checkpoints preapproved under autodoc/autoloop. Implementation/package QC not selected.
 - Tracking: documentation and implementation enabled by existing root AGENTS.md. All nine standard issues and native milestone verified before any preparation write. Publication: push/read back every owned commit.
 - Stop: all six passes through final DOCS-008. DOCS-009/package QC, documentation integration and implementation are outside the current automatic range.
@@ -37,6 +37,7 @@ The user approved the published brief and recorded interaction proposals on 2026
 | Pass 1 / cookie scope | One namespaced cookie per setting, Path=/, SameSite=Lax, one-year lifetime; Secure on HTTPS. Persist valid explicit URL values, including defaults. Missing URL key does not write a default over a cookie. | Agent proposal supporting reload/reopen behavior | Pass 6; accepted |
 | Pass 1 / verification | Chromium headless shell primary and Playwright-managed Firefox secondary; isolated provisioning and state under BROWSER_DEV_POLICY.md. Browser installation is unnecessary during document preparation. | Existing repository browser policy; no capability claim | All implementation phases; retained policy |
 | Pass 1 / versions | First delivered gameplay release 0.1.0. Increment minor version for each completed gameplay/configuration phase and patch for compatible fixes. Publish release/tag/notes only after authorized implementation phase verification and integration. No product release for proposals or document passes. | User version/release instruction plus agent version proposal | Future implementation; accepted |
+| Pass 2 / inherited decisions | Carry forward accepted cross-scope decisions from Pass 1; current delta: Gameplay enhancements. Recheck applicability before authoring. | User-approved predefined sequence and autoloop delegation | Current; no protected delivery-range change |
 
 ## Cross-scope decisions
 
@@ -62,6 +63,12 @@ The user approved the published brief and recorded interaction proposals on 2026
 | DOCS-008 | Pass 1 accepted by scoped autodoc preapproval; exact state and QC in Accepted document states. |
 | DOCS-009 | Not selected by autodoc/autoloop range. |
 
+## Protected delivery ranges
+
+| Completed pass | Checkpoint / protected scope |
+| --- | --- |
+| 1 | f4b41b3a7dfe236a8b40fe723e83afde37707f35; PLAN SHA-256 eca2d038739a0fb828200e00dd77effed2f5f65451cf3fe5fcfa128df05cf161; TASKS SHA-256 da26fd713bda611b9ab1f4dbade3a42607ea7531e46d3496cbac1c486133c7e9; phases 1–1 and their existing task ranges immutable. |
+
 ## Accepted document states
 
 | Pass / task | Accepted identity and evidence |
@@ -82,8 +89,8 @@ The user approved the published brief and recorded interaction proposals on 2026
 - Tracking gate: sdd-docs-main milestone 1; DOCS-001–009 issues #1–#9, ordered, exact bundled brief content and milestone associations verified before writes. Standard definitions from repository-bundled SDD Manager v0.15.2.
 - Git baseline: clean template main at 0e4dfbff6d3c6540e2300457878f12d32c131b4e; documentation branch created from published provenance merge cc0c042d00bb42f3171d16da27f03c4aedb794b8. Existing guidance and policies preserved.
 - Credentials: supplied repository credential saved in conventional ignored/untracked file after projection, with effective exclusion verified. No values in tracked records.
-- Current reset: none; pass 1 PROJECT accepted.
+- Current reset: 1 → 2; predefined autoloop scope Gameplay enhancements; user first approval covers reset. Earlier PLAN/TASKS retained unchanged; same issues reopen after this reset publication.
 
 ## Pending transitions
 
-Publish/read back the current Pass 1 DOCS-008 checkpoint and close/read back issue #8 with its exact commit evidence. Recover actual Git/hosted state before replay. Then perform the authorized reset for the next predefined scope.
+Publish/read back reset from f4b41b3a7dfe236a8b40fe723e83afde37707f35; reopen/read back the same DOCS-002–009 issues and verify milestone remains open before current-scope authoring. No implementation authorized.
