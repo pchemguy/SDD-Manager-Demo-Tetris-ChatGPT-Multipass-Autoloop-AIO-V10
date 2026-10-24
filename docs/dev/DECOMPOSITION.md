@@ -1,0 +1,30 @@
+# Component decomposition
+
+## Component map
+
+The blocks in [ARCHITECTURE](ARCHITECTURE.md) contain these logical components. Interfaces describe responsibilities; SPEC owns precise behavioral contracts when available.
+
+| Component | Provides / requires | Ownership and limits |
+| --- | --- | --- |
+| Geometry | Piece definitions, rotated cell offsets, board-bounds/collision predicate; accepts board and candidate | Stateless. Does not choose pieces, advance time or render |
+| Piece source | Next tetromino kind from injected random stream | Owns random-consumption state; never changes the board |
+| Session engine | Create/restart state; apply move/rotate/soft-down actions; advance active elapsed milliseconds; produce read-only snapshot | Owns board, active piece, gravity accumulator, score, cleared-line total, level and game-over state |
+| Lock/progression operations | Validate final placement, merge cells, compact complete rows, calculate score/level and spawn outcome | Internal engine collaboration using Geometry and Piece source; one transaction, no independently running subsystem |
+| Game controller | Start/dispose one frame loop; order commands and elapsed time; suspend/resume with focus/visibility | Requires engine, clock and source adapters. Owns no duplicate board |
+| Keyboard adapter | Translate physical keys; clear held input on focus loss; prevent page scrolling for consumed game keys | Emits actions only when game focus permits; excludes text/control editing and ignores OS repeat for discrete actions |
+| Board renderer | Draw settled cells and live piece from snapshot; resize drawing surface for display scale | Owns Canvas resources only; drawing errors cannot mutate the engine |
+| Status/control view | Score/progression, instructions, start/game-over feedback and restart control | Semantic HTML, visible keyboard focus; sends restart through controller |
+
+## State and collaboration
+
+SessionState contains a 20×10 settled-cell grid, optional active piece (kind, orientation and integer anchor), score, total cleared lines, level, gravity remainder and running/game-over flag. A piece is represented by four occupied offsets; empty matrix padding is not a board cell. Live placement legality is evaluated on occupied offsets only.
+
+The controller obtains elapsed active time and queued actions, processes them in deterministic order, then renders the resulting snapshot. The engine owns action rejection and lifecycle invariants. A lock validates placement before modifying the board, clears all complete rows simultaneously, applies progression and requests the next kind. Spawn failure ends the game without writing a colliding active piece into settled cells.
+
+Restart replaces engine state and clears pending input/time in the controller; renderer and control nodes are reused. Disposal removes listeners and cancels owned scheduling. Browser failures are reported through visible startup/error state where appropriate rather than fabricating gameplay success.
+
+## Interface and test boundaries
+
+Core input consists of integer action identifiers, nonnegative finite elapsed milliseconds and a random source returning values in [0,1). Invalid time or injected random values produce a defined error without partial transition. Core output is a serializable snapshot with copied board/cell data. Tests can create explicit board fixtures and deterministic piece streams through internal construction seams; no test-only browser globals are part of the player API.
+
+Geometry tests isolate walls/floor/rotation. Engine tests assert board conservation except line removal, simultaneous clears, scoring/progression, spawn failure and restart. Controller tests use fake time and focus events. End-to-end browser tests check actual input delivery, visible output and repeated restart/teardown. Physical owners are defined by layout rather than this logical model.
