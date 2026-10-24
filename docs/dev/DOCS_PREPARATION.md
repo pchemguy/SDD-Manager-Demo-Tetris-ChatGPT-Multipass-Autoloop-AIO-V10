@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested for six predefined cumulative scope passes on 2026-10-24.
 - Delivery mode: strict multipass by default. Later phases/tasks must preserve earlier IDs, names, scope, membership, order, dependencies and exits. No flexible exception granted.
-- Current pass: 3; DOCS-003 accepted locally, publication/issue closure require confirmation below.
+- Current pass: 3; DOCS-004 accepted locally, publication/issue closure require confirmation below.
 - Approval basis: user response Approve on 2026-10-24 accepts proposal 544b69a9c6bfd16fabd6c7b008fe364d837903ae and all recorded interaction proposals. Six predefined scopes/resets authorized. Later PROJECT approvals waived; remaining document checkpoints preapproved under autodoc/autoloop. Implementation/package QC not selected.
 - Tracking: documentation and implementation enabled by existing root AGENTS.md. All nine standard issues and native milestone verified before any preparation write. Publication: push/read back every owned commit.
 - Stop: all six passes through final DOCS-008. DOCS-009/package QC, documentation integration and implementation are outside the current automatic range.
@@ -91,6 +91,7 @@ The user approved the published brief and recorded interaction proposals on 2026
 | Pass 2 / DOCS-008 | TASKS.md SHA-256 54f7c6615d9dfa48a89a9fbea4e10a37e5c55e5a183cdab8329328bc541e1fee; T-007–T-013 appended under Phase 2; protected Phase 1 task/PLAN prefixes unchanged. Current task conformance Ready; next authorized reset to conditional visibility. Scoped autoloop preapproval applies. |
 | Pass 3 / DOCS-002 | PROJECT.md SHA-256 91716f74c4e7067649eb99b4d3b96b813239984c4810595fb29b0a52421079eb; Conditional ghost scope adopted; accepted whole-piece midline decision applies. Other future scopes remain outside current product description. Scoped autoloop preapproval applies. |
 | Pass 3 / DOCS-003 | ARCHITECTURE.md SHA-256 9c4237b24e91af4b32914048962c2d1b3efe4e5bd18af68bd6814dcaac1df0b6; Existing architecture reused unchanged: browser presentation decides what to draw from the core-owned projection; visibility never changes core movement. Reviewed current brief consistency; no new block/dependency required. Scoped autoloop preapproval applies. |
+| Pass 3 / DOCS-004 | DECOMPOSITION.md SHA-256 d25daf16ceabfab852b7ed28e99b1f04f7b5d9d807bed2da517f48f053c6f9e7; Existing component decomposition reused unchanged: Board renderer owns ghost presentation and Landing projection supplies authoritative occupied cells. Visibility predicate is a bounded rendering function, not another state owner. Scoped autoloop preapproval applies. |
 
 ## Initialization and current reset
 
@@ -104,4 +105,4 @@ The user approved the published brief and recorded interaction proposals on 2026
 
 ## Pending transitions
 
-Publish/read back the current Pass 3 DOCS-003 checkpoint and close/read back issue #3 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.
+Publish/read back the current Pass 3 DOCS-004 checkpoint and close/read back issue #4 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.
