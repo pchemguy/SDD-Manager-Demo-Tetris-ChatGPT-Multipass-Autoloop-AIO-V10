@@ -1,0 +1,72 @@
+# Main documentation preparation record
+
+## Current control
+
+- Mode: autodoc/autoloop, explicitly requested for six predefined cumulative scope passes on 2026-10-24.
+- Delivery mode: strict multipass by default. Later phases/tasks must preserve earlier IDs, names, scope, membership, order, dependencies and exits. No flexible exception granted.
+- Current pass: 1, playable classic baseline. DOCS-001 initialization complete locally; publication and issue closure require confirmation before DOCS-002.
+- Approval basis: first PROJECT approval remains required. Later PROJECT approvals are waived, announced before this checkpoint; ARCHITECTURE through TASKS checkpoints are preapproved by the selected mode. First approval will authorize the agreed scope sequence and automatic resets; it has not yet occurred.
+- Tracking: documentation and implementation enabled by existing root AGENTS.md. All nine standard issues and native milestone verified before any preparation write. Publication: push/read back every owned commit.
+- Stop: first PROJECT proposal approval, then all six passes through final DOCS-008. DOCS-009/package QC, documentation integration and implementation are outside the current automatic range.
+- Reporting: Explicit startup, then Standard; Minimal/Standard/Explicit choices announced.
+
+## Scope sequence
+
+1. **Playable classic baseline:** falling tetrominoes, movement, rotation, gravity, line clearing, scoring, game over and restart; minimal usable game, without adopting later enhancements.
+2. **Gameplay enhancements:** Hold, ghost, 7-bag, wall kicks, hard drop; default lock after one complete gravity interval from becoming grounded, including after hard drop.
+3. **Conditional ghost visibility:** hide projected landing above the board midline; show in lower half.
+4. **Penetrator mode:** bonus hotkey converts current falling piece until lock; crosses occupied cells without destroying them. Final placement entirely inside board and disjoint from settled cells. Hard drop and ghost use deepest valid landing through blockers. Four-line clear awards one activation, capped at three. Active piece entirely white; regular pieces nonwhite. Side-panel symbol per bonus updates on earn/spend.
+5. **Session-only configuration:** side-panel controls for ghost hide/dynamic/show, hard drop on/off, next preview on/off (introduce preview here), hard-drop follow-general/immediate, general failed-down/full-interval locking, Hold on/off. Defaults proposed below. Reload resets settings in this scope.
+6. **Configuration persistence:** all six settings independently resolve valid explicit URL value, then valid corresponding cookie, then default. Changes write cookie and update URL. Persist valid explicit URL values even when equal to defaults; omitted parameters retain cookies. Replace session-only reload behavior only in this scope.
+
+## Per-pass decisions
+
+These are agent proposals for the first human PROJECT/sequence approval, not user-confirmed requirements. Future choices remain here until their applicable scope is adopted. Later material discoveries fall under autoloop delegation, with visible rationale and durable decisions.
+
+| Origin / decision | Proposed resolution and rationale | Source / basis | Applicability / status |
+| --- | --- | --- | --- |
+| Pass 1 / platform | Desktop keyboard browser game; TypeScript with Canvas board and semantic HTML controls; no backend. Canvas suits board drawing; HTML keeps controls accessible. Plain JavaScript reduces tooling but loses static contracts; a full UI framework adds little to this UI. | Agent recommendation from browser scope and minimal baseline; approval pending | All passes; proposed |
+| Pass 1 / baseline | 10-column by 20-row visible board, seven tetromino types, independent uniform piece selection, simple rotation rejecting collisions, lock on failed downward attempt, conventional line scoring and increasing gravity speed, fresh game on restart. | Agent proposal for coherent minimal classic game | Pass 1; proposed. Randomizer and locking superseded by requested Pass 2 additions when adopted |
+| Pass 1 / ghost midline | With rows 0–19 and boundary at 10, show a dynamic ghost only if its uppermost occupied cell is row 10 or below. A straddling ghost stays hidden until every cell is in lower half. | Agent proposal; resolves user-requested interaction with consistent whole-piece visibility | Passes 3–6; proposed |
+| Pass 1 / interval lock | Grounded means resting at a valid legal landing. Start a full interval on first ground contact. Movement/rotation that remains grounded does not restart it; leaving ground cancels it, and later contact starts a new interval. Snapshot interval at contact; freeze elapsed simulation time while page is inactive. Hard drop starts/retains the same timer and cannot refresh it repeatedly. | Agent proposal to avoid accidental instant locks and timer stalling | Passes 2–6; proposed |
+| Pass 1 / penetration and Hold | Activation consumes one bonus once, only for a live regular piece in legal placement; repeat activation has no effect. Hold is disabled throughout active penetration. Ability expires only when locked; restart clears bonuses. | Agent proposal, consistent with established user preference; present for current-project approval | Passes 4–6; proposed |
+| Pass 1 / penetration geometry | Occupancy may be crossed during movement and rotation; bounds still apply. Lock requires a fully legal position. Use one shared deepest-legal-placement search below current anchor for natural descent, hard drop and ghost; reject lateral/rotation candidates with no legal destination at or below them. Stop at that deepest destination rather than entering an overlapping floor position. Intermediate overlap never triggers locking; settled cells stay unchanged until legal lock/clear. | Agent proposal to make pass-through movement compatible with guaranteed valid final placement | Passes 4–6; proposed |
+| Pass 1 / live settings | Ghost, preview, hard-drop enabled and Hold enabled changes take effect immediately. Preserve stored Hold content when disabled; show disabled status, restore availability when enabled. General/hard-drop lock-policy changes apply to the next spawned piece (including Hold replacement), preserving current-piece deadlines. Settings survive game restart. | Agent proposal to prevent retroactive or surprise current-piece locking | Passes 5–6; proposed |
+| Pass 1 / configuration defaults | Ghost dynamic; hard drop on; preview on; hard-drop follows general; general full-interval; Hold on. Before configuration exists, use each currently supported behavior only. | Agent proposal aligned with requested enhancements | Passes 5–6; proposed |
+| Pass 1 / invalid configuration | Strict allowlists. Empty, malformed or unrecognized URL/cookie values are invalid and fall through independently to next valid source. Duplicate recognized URL keys use first occurrence. Invalid URL values never overwrite cookies. Unknown query parameters and fragment retained. URL changes use replaceState; cookie failures retain session/URL usability without crashing. | Agent proposal; precedence remains exactly as requested for valid values | Pass 6; proposed |
+| Pass 1 / cookie scope | One namespaced cookie per setting, Path=/, SameSite=Lax, one-year lifetime; Secure on HTTPS. Persist valid explicit URL values, including defaults. Missing URL key does not write a default over a cookie. | Agent proposal supporting reload/reopen behavior | Pass 6; proposed |
+| Pass 1 / verification | Chromium headless shell primary and Playwright-managed Firefox secondary; isolated provisioning and state under BROWSER_DEV_POLICY.md. Browser installation is unnecessary during document preparation. | Existing repository browser policy; no capability claim | All implementation phases; retained policy |
+| Pass 1 / versions | First delivered gameplay release 0.1.0. Increment minor version for each completed gameplay/configuration phase and patch for compatible fixes. Publish release/tag/notes only after authorized implementation phase verification and integration. No product release for proposals or document passes. | User version/release instruction plus agent version proposal | Future implementation; proposed |
+
+## Cross-scope decisions
+
+| Concern | Applicable decision | Reconsideration condition |
+| --- | --- | --- |
+| Whole-piece ghost visibility | Ghost-midline decision, including penetrator projection; passes 3–6 | Board geometry or explicit visibility change |
+| Landing and lock timing | Interval-lock and penetration-geometry decisions; passes 2–6 | New movement or time controls affect landing validity |
+| Hold and ability lifetime | Penetration/Hold and live-settings decisions; passes 4–6 | Human changes ability transfer semantics |
+| Runtime settings and persistence | Live-settings/defaults/invalid-configuration/cookie decisions; passes 5–6 | New setting or cross-setting constraint |
+| Delivery preservation | Strict mode above; keep each earlier PLAN/TASKS range immutable as later scopes are adopted | Explicit scoped human exception only |
+
+## Decisions and document evidence
+
+| Task | Current evidence / decision basis |
+| --- | --- |
+| DOCS-001 | All four original root files retained byte for byte against initial commit 0e4dfbff6d3c6540e2300457878f12d32c131b4e. No copies needed. Task template copied and only DOCS-001 checked. Separate preparation record/HANDOFF created. Provenance evidence below. Publication and issue closure pending readback. |
+| DOCS-002 | Pass 1 PROJECT proposal not yet submitted or approved. |
+| DOCS-003–008 | Not started; downstream of first PROJECT approval. |
+| DOCS-009 | Not selected by autodoc/autoloop range. |
+
+## Initialization and current reset
+
+- Original root presence: retained AI_DISCLOSURE.md, SDD-MANAGER.md, AGENTS.md, SKILL_DISCOVERY_PROTOCOL.md; copied none. All compared to original Git blobs; preservation passed.
+- Continuation: full initial set; no mixed-state continuation pause.
+- Manual provenance: default enabled; two exact package assets seeded on design-docs/ai-logs at 073c9b0fd28f97648edfa0f1a5b6fe73f50c59bd from main 0e4dfbff6d3c6540e2300457878f12d32c131b4e, explicitly merged to main at cc0c042d00bb42f3171d16da27f03c4aedb794b8. Both branch commits pushed with matching remote readback. No transcript recorded. Branch retained.
+- Tracking gate: sdd-docs-main milestone 1; DOCS-001–009 issues #1–#9, ordered, exact bundled brief content and milestone associations verified before writes. Standard definitions from repository-bundled SDD Manager v0.15.2.
+- Git baseline: clean template main at 0e4dfbff6d3c6540e2300457878f12d32c131b4e; documentation branch created from published provenance merge cc0c042d00bb42f3171d16da27f03c4aedb794b8. Existing guidance and policies preserved.
+- Credentials: supplied repository credential saved in conventional ignored/untracked file after projection, with effective exclusion verified. No values in tracked records.
+- Current reset: none; pass 1 not yet accepted.
+
+## Pending transitions
+
+Publish/read back this initialization checkpoint, then add evidence and close/read back DOCS-001 issue #1. Prepare and publish PROJECT proposal with README links; leave DOCS-002 unchecked and issue #2 open until first human approval. No implementation authorized.
