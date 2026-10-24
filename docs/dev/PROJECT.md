@@ -34,3 +34,7 @@ Online multiplayer, accounts, backend leaderboards and mobile touch controls are
 ## Success criteria
 
 A user can start a game, move and rotate pieces, let gravity settle them, clear rows, observe score and speed progression, reach game over and restart without reloading. Rules remain consistent at walls, floor, stacked cells and spawn boundaries. Automated rule tests and browser interaction/rendering checks demonstrate that behavior; document preparation alone establishes no implementation claim.
+
+## Ghost visibility
+
+The ghost is visible when its complete projected piece lies in the lower half of the board. Hide it when any projected occupied cell is above the midline, including a projection that straddles the boundary. This changes visual assistance without changing the piece's landing or movement.

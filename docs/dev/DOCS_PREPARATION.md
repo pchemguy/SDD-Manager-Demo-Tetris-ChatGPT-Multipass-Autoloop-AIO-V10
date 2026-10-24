@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested for six predefined cumulative scope passes on 2026-10-24.
 - Delivery mode: strict multipass by default. Later phases/tasks must preserve earlier IDs, names, scope, membership, order, dependencies and exits. No flexible exception granted.
-- Current pass: 3, Conditional ghost visibility; reset to DOCS-002. Prior scope completed through DOCS-008 at ae73199eab39a89451ea748658a4c17a8325ee41.
+- Current pass: 3; DOCS-002 accepted locally, publication/issue closure require confirmation below.
 - Approval basis: user response Approve on 2026-10-24 accepts proposal 544b69a9c6bfd16fabd6c7b008fe364d837903ae and all recorded interaction proposals. Six predefined scopes/resets authorized. Later PROJECT approvals waived; remaining document checkpoints preapproved under autodoc/autoloop. Implementation/package QC not selected.
 - Tracking: documentation and implementation enabled by existing root AGENTS.md. All nine standard issues and native milestone verified before any preparation write. Publication: push/read back every owned commit.
 - Stop: all six passes through final DOCS-008. DOCS-009/package QC, documentation integration and implementation are outside the current automatic range.
@@ -89,6 +89,7 @@ The user approved the published brief and recorded interaction proposals on 2026
 | Pass 2 / DOCS-006 | PLAN.md SHA-256 0c6036b2c4de6d8ce51981194961187bf4b64ae45d4eb0d3a99077cbca75b2f5; Phase 2 appended with 2.1–2.3, 0.2.0 and explicit included/excluded contracts; strict Phase 1 prefix unchanged. Scoped autoloop preapproval applies. |
 | Pass 2 / DOCS-007 | layout.md SHA-256 51692ccaa2b29020e85b99103506b948455ad7d3d152b0c98fdd2a670e294df8; Combined PLAN/layout review Ready; bounded core modules and consumer tests assigned. Scoped autoloop preapproval applies. |
 | Pass 2 / DOCS-008 | TASKS.md SHA-256 54f7c6615d9dfa48a89a9fbea4e10a37e5c55e5a183cdab8329328bc541e1fee; T-007–T-013 appended under Phase 2; protected Phase 1 task/PLAN prefixes unchanged. Current task conformance Ready; next authorized reset to conditional visibility. Scoped autoloop preapproval applies. |
+| Pass 3 / DOCS-002 | PROJECT.md SHA-256 91716f74c4e7067649eb99b4d3b96b813239984c4810595fb29b0a52421079eb; Conditional ghost scope adopted; accepted whole-piece midline decision applies. Other future scopes remain outside current product description. Scoped autoloop preapproval applies. |
 
 ## Initialization and current reset
 
@@ -102,4 +103,4 @@ The user approved the published brief and recorded interaction proposals on 2026
 
 ## Pending transitions
 
-Publish/read back reset from ae73199eab39a89451ea748658a4c17a8325ee41; reopen/read back the same DOCS-002–009 issues and verify milestone remains open before current-scope authoring. No implementation authorized.
+Publish/read back the current Pass 3 DOCS-002 checkpoint and close/read back issue #2 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.
