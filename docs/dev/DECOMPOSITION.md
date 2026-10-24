@@ -38,3 +38,12 @@ Geometry tests isolate walls/floor/rotation. Engine tests assert board conservat
 - View snapshot includes held kind, Hold availability and projected ghost cells. Controller maps C/Shift to Hold and Space to hard drop, with discrete-action repeat suppression.
 
 Hold, drop and timer interactions are session rules, not independent services. Unit tests isolate bag permutations, kick order, projection and lock deadline; integration checks prove the displayed ghost agrees with the actual hard-drop result and Hold cannot bypass once-per-lock restriction.
+
+## Ability and projection collaboration
+
+- Session engine owns bonus count 0–3 and active penetrator flag. Its lock/clear transaction grants a bonus only for a four-line clear. Activation atomically spends one bonus and marks the current piece; Hold is rejected while marked.
+- Geometry exposes bounds and ordinary empty-placement predicates separately. Landing projection scans legal settlement candidates from the current anchor to the lowest in-bounds anchor and returns the deepest valid one for penetrators; ordinary projection retains E02 behavior.
+- Engine movement uses the active mode's traversal predicate, accepting overlap only when a legal destination remains at or below the candidate. A target change cancels or preserves grounded timing according to actual grounded state. Occupied intermediate cells are never written back or destroyed.
+- Renderer consumes active ability and projected cells, drawing the live penetrator and its ghost in white with distinguishable treatment. The status/control view consumes bonus count and Hold-disabled state; neither owns a parallel ledger.
+
+Deterministic fixtures cover cavities beneath blockers, invalid bottom rows, rejected geometry with no valid future settlement, activation from a grounded regular piece, Hold rejection without mutation, capped awards and legal lock. Browser scenarios exercise bonus earn/spend indication and actual white movement through a stack before legal settlement.

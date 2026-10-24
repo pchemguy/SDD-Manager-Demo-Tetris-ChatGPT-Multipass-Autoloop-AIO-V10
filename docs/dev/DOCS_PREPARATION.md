@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested for six predefined cumulative scope passes on 2026-10-24.
 - Delivery mode: strict multipass by default. Later phases/tasks must preserve earlier IDs, names, scope, membership, order, dependencies and exits. No flexible exception granted.
-- Current pass: 4; DOCS-003 accepted locally, publication/issue closure require confirmation below.
+- Current pass: 4; DOCS-004 accepted locally, publication/issue closure require confirmation below.
 - Approval basis: user response Approve on 2026-10-24 accepts proposal 544b69a9c6bfd16fabd6c7b008fe364d837903ae and all recorded interaction proposals. Six predefined scopes/resets authorized. Later PROJECT approvals waived; remaining document checkpoints preapproved under autodoc/autoloop. Implementation/package QC not selected.
 - Tracking: documentation and implementation enabled by existing root AGENTS.md. All nine standard issues and native milestone verified before any preparation write. Publication: push/read back every owned commit.
 - Stop: all six passes through final DOCS-008. DOCS-009/package QC, documentation integration and implementation are outside the current automatic range.
@@ -100,6 +100,7 @@ The user approved the published brief and recorded interaction proposals on 2026
 | Pass 3 / DOCS-008 | TASKS.md SHA-256 cc9a836320716efa214e5b27899593f2b61343402e6072952945a4309d096006; T-014–T-015 appended; strict Phase 1–2 prefixes unchanged. Current conformance Ready; next authorized reset to penetrator scope. Scoped autoloop preapproval applies. |
 | Pass 4 / DOCS-002 | PROJECT.md SHA-256 39d4c10b2f1e9b3568dcb5f2608055f7ff14487cd134dcc9176f747f7496eeea; Penetrator scope adopted with accepted Hold prohibition, deepest legal placement and cap/indicator rules. Inherited timing/midline decisions reviewed; no configuration adopted. Scoped autoloop preapproval applies. |
 | Pass 4 / DOCS-003 | ARCHITECTURE.md SHA-256 ba848d13f5989699b07199cb0ac2c50c20f06afdd4beb3cccbebfb6e09df7865; Traversal/settlement predicates and shared mode-aware projection keep settled-cell preservation explicit. White rendering is derived from live ability; core piece identity remains stable. Grounding recalculates on activation. Scoped autoloop preapproval applies. |
+| Pass 4 / DOCS-004 | DECOMPOSITION.md SHA-256 cb4602b497e757c27d86533a29a711d0080c5fb93a5e516aa508473739d12ff3; Reviewed engine ledger/flag ownership, separate Geometry predicates, projection scanning, timer integration and derived view state; no circular dependency or duplicated placement rule. Scoped autoloop preapproval applies. |
 
 ## Initialization and current reset
 
@@ -113,4 +114,4 @@ The user approved the published brief and recorded interaction proposals on 2026
 
 ## Pending transitions
 
-Publish/read back the current Pass 4 DOCS-003 checkpoint and close/read back issue #3 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.
+Publish/read back the current Pass 4 DOCS-004 checkpoint and close/read back issue #4 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.
