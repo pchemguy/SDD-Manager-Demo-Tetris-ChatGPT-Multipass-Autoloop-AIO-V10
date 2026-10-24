@@ -53,3 +53,42 @@ Core fixtures cover geometry, multiple clears, progression, spawn failure and re
 | B03 | Lock/progression operations | Simultaneous-clear, compaction and score/level fixtures |
 | B04 | Controller, Board renderer, Status/control view | Actual game-over/restart scenario and inspected screenshots |
 | B05 | Core and adapters | Static build, deterministic seams, failure/alias/teardown checks and both-browser evidence |
+
+## Enhanced delivery contract scope
+
+B01–B05 define the classic delivery contracts. The complete enhanced game uses E01 instead of B01's independent draw, E02 instead of B01's no-kick rotation, and E03 instead of B02's immediate failed-down locking. Those precise aspects are enhanced-delivery changes; classic phase exits remain limited to B01–B05. All other baseline guarantees continue to apply. The enhanced controls are available without a configuration panel.
+
+## E01 — Bag and Hold
+
+Shuffle I/O/T/S/Z/J/L with Fisher–Yates, visiting i=6 down to 1 and swapping i with floor(r×(i+1)) using one injected [0,1) draw per step. Consume each shuffled bag from index 0 before shuffling another. Every seven-kind bag contains each kind once; a boundary may repeat a kind across adjacent bags. Inspecting queued kind consumes nothing.
+
+C or either Shift activates Hold. Empty slot stores current kind and consumes one source kind; populated slot swaps kinds without consuming source. Incoming piece starts at B01 spawn orientation/anchor with fresh gravity/grounded state. Once used, further Hold commands do nothing until that active piece locks. Returning from Hold counts as the same active lifetime for this restriction; do not reset Hold-used just because a swap spawned a piece. Blocked incoming spawn ends the game and preserves the resulting Hold slot. Restart empties Hold and resets availability and bag queue. Hold view displays stored kind and unavailable state.
+
+Acceptance: exact bag membership and deterministic shuffle order; empty/nonempty swaps with correct source consumption; repeat suppression until lock; blocked swap/game-over and restart clear state.
+
+## E02 — Rotation and landing projection
+
+Quarter-turn rotation uses [ordered wall-kick tables](spec/ROTATION.md). The pure ordinary landing is the last legal placement reached by moving down one row repeatedly until the next step would collide or leave the board. It does not search through settled blockers. Ghost cells equal that projection, drawn behind the active piece and distinguishable from settled cells. A coincident ghost may be omitted to keep the active piece legible. Ghost is shown at every other valid projected landing in this delivery scope.
+
+Acceptance: all kick transitions and rejection fixtures pass; ordinary projection stops above blockers; preview cells and hard-drop placement match for every tested orientation/edge/stack case.
+
+## E03 — Grounded full-interval lock delay
+
+Grounded means the live piece is at a valid landing and cannot descend farther under its movement rule. Detect ground contact immediately after spawn or a successful move/rotation/down/drop reaches such a landing. Capture the current gravity interval and start grounded elapsed time at zero at contact, independently of the gravity remainder. Lock when active grounded elapsed reaches that full captured interval, never earlier.
+
+A failed downward attempt while grounded does not immediately lock. Successful translation/rotation that stays grounded retains elapsed time; leaving ground cancels contact and elapsed, and later contact starts a fresh full interval. Failed actions do not reset timers. Repeated hard drop to the same landing retains an existing deadline. Hard drop to a different landing establishes contact there. Hold/lock/restart clear piece timers. Hidden/unfocused time is excluded. A single large elapsed update must split at gravity/contact/lock boundaries; time before contact cannot count toward the grounded delay, and leftover active time can advance a newly spawned piece only after the lock event. Match results from equivalent small time partitions.
+
+Acceptance: contact at t=0 with interval I does not lock at I−1 and locks at I; old gravity remainder cannot shorten I; floor kicks staying grounded cannot refresh it; leaving/regaining ground restarts it; repeated drop/failed-down/rotation spam cannot reset an unchanged contact; inactive time adds zero.
+
+## E04 — Hard drop and enhanced player feedback
+
+Space moves a live piece to E02 landing immediately, awards 2 points per downward row actually moved and enters/continues E03 timing. A zero-distance repeat earns zero and does not refresh contact. Drop does not clear lines before lock. Game-over commands do nothing. Hold and hard-drop keys are discrete, ignore native repeat and obey B02 focus rules.
+
+Show Hold status and ghost with updated control instructions. Browser acceptance exercises Hold before/after lock, a kick at a wall, hard drop matching ghost, the full visible delay before lock, and restart. Core acceptance covers all E01–E04 boundaries and retained B03 scoring/clear transactions. No next-piece preview is required by these contracts.
+
+| Contract | Component route | Acceptance route |
+| --- | --- | --- |
+| E01 | Piece source and Session engine; Hold view | Bags, source-consumption, exchange lifecycle and browser availability |
+| E02 | Rotation policy, Geometry, Landing projection | Tables, deterministic candidate selection, ghost/drop identity |
+| E03 | Session engine and controller clock | Exact deadlines, reset/no-reset, active-time partition and lifecycle |
+| E04 | Session/controller/input/rendering | Actual drop/hold controls, scoring and inspected game output |
