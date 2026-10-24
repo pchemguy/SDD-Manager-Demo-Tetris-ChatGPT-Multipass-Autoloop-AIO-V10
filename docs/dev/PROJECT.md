@@ -38,3 +38,7 @@ A user can start a game, move and rotate pieces, let gravity settle them, clear 
 ## Ghost visibility
 
 The ghost is visible when its complete projected piece lies in the lower half of the board. Hide it when any projected occupied cell is above the midline, including a projection that straddles the boundary. This changes visual assistance without changing the piece's landing or movement.
+
+## Penetrator ability
+
+A four-line clear earns one penetrator activation, with at most three stored. A hotkey spends one bonus to let the current piece pass through settled cells until it locks in a fully in-bounds, nonoverlapping position. Hold is unavailable while this ability is active. Hard drop and ghost use the deepest valid destination below blocking cells. Show the active penetrator entirely white, keep ordinary pieces nonwhite, and display one side-panel symbol per available bonus. Restart clears stored bonuses and active ability.

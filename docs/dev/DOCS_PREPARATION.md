@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested for six predefined cumulative scope passes on 2026-10-24.
 - Delivery mode: strict multipass by default. Later phases/tasks must preserve earlier IDs, names, scope, membership, order, dependencies and exits. No flexible exception granted.
-- Current pass: 4, Penetrator mode; reset to DOCS-002. Prior scope completed through DOCS-008 at 1c986b94423e839e8d2d765a6781ab2933dcfdc5.
+- Current pass: 4; DOCS-002 accepted locally, publication/issue closure require confirmation below.
 - Approval basis: user response Approve on 2026-10-24 accepts proposal 544b69a9c6bfd16fabd6c7b008fe364d837903ae and all recorded interaction proposals. Six predefined scopes/resets authorized. Later PROJECT approvals waived; remaining document checkpoints preapproved under autodoc/autoloop. Implementation/package QC not selected.
 - Tracking: documentation and implementation enabled by existing root AGENTS.md. All nine standard issues and native milestone verified before any preparation write. Publication: push/read back every owned commit.
 - Stop: all six passes through final DOCS-008. DOCS-009/package QC, documentation integration and implementation are outside the current automatic range.
@@ -98,6 +98,7 @@ The user approved the published brief and recorded interaction proposals on 2026
 | Pass 3 / DOCS-006 | PLAN.md SHA-256 7f32a9e05dd683e829571be8335dc4232ade3212562ea1e5ebced7cdba82ad8b; Phase 3 appended as a narrow visibility increment with explicit count rationale and version 0.3.0; earlier PLAN prefix unchanged. Scoped autoloop preapproval applies. |
 | Pass 3 / DOCS-007 | layout.md SHA-256 51692ccaa2b29020e85b99103506b948455ad7d3d152b0c98fdd2a670e294df8; layout reused unchanged after current-scope review; existing renderer/unit/browser homes cover G01. Scoped autoloop preapproval applies. |
 | Pass 3 / DOCS-008 | TASKS.md SHA-256 cc9a836320716efa214e5b27899593f2b61343402e6072952945a4309d096006; T-014–T-015 appended; strict Phase 1–2 prefixes unchanged. Current conformance Ready; next authorized reset to penetrator scope. Scoped autoloop preapproval applies. |
+| Pass 4 / DOCS-002 | PROJECT.md SHA-256 39d4c10b2f1e9b3568dcb5f2608055f7ff14487cd134dcc9176f747f7496eeea; Penetrator scope adopted with accepted Hold prohibition, deepest legal placement and cap/indicator rules. Inherited timing/midline decisions reviewed; no configuration adopted. Scoped autoloop preapproval applies. |
 
 ## Initialization and current reset
 
@@ -111,4 +112,4 @@ The user approved the published brief and recorded interaction proposals on 2026
 
 ## Pending transitions
 
-Publish/read back reset from 1c986b94423e839e8d2d765a6781ab2933dcfdc5; reopen/read back the same DOCS-002–009 issues and verify milestone remains open before current-scope authoring. No implementation authorized.
+Publish/read back the current Pass 4 DOCS-002 checkpoint and close/read back issue #2 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.
