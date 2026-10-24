@@ -38,3 +38,9 @@ Hold display and ghost drawing extend browser/view.ts and renderer.ts; action bi
 Keep mode-aware traversal/settlement predicates in src/core/geometry.ts and deepest valid destination in src/core/landing.ts. Bonus count, active flag, movement/contact/lock transactions stay in src/core/engine.ts and types.ts; no second ability state store is needed. Focused fixtures extend unit geometry/landing/engine tests, with cavity/blocked-floor boards in tests/fixtures/.
 
 P binding, white active/ghost rendering and bonus/Hold-disabled status extend existing input.ts, renderer.ts and view.ts. Actual ability scenarios belong in tests/e2e/penetrator.spec.ts. Board fixtures can construct bonus/stack state through core test seams; production exports no unguarded player-facing test hook.
+
+## Session settings ownership
+
+The typed settings/default/validation model belongs in src/app/settings.ts with tests/unit/settings.test.ts. Its lifecycle is coordinated by controller.ts; core engine/types own captured live-piece policies, and core tests exercise policy combinations without browser globals. Session setting updates do not import storage APIs.
+
+Native controls and selected/pending policy feedback belong in src/browser/settings-view.ts; input.ts excludes their focus from gameplay bindings. Next display extends view.ts using random.ts inspect; ghost options extend renderer.ts. Six-control/lifetime/focus scenarios belong in tests/e2e/settings.spec.ts, with source-consumption and lock-matrix unit fixtures beside their core/model owners. No cookie/location source module is required for this session scope.

@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested for six predefined cumulative scope passes on 2026-10-24.
 - Delivery mode: strict multipass by default. Later phases/tasks must preserve earlier IDs, names, scope, membership, order, dependencies and exits. No flexible exception granted.
-- Current pass: 5; DOCS-006 accepted locally, publication/issue closure require confirmation below.
+- Current pass: 5; DOCS-007 accepted locally, publication/issue closure require confirmation below.
 - Approval basis: user response Approve on 2026-10-24 accepts proposal 544b69a9c6bfd16fabd6c7b008fe364d837903ae and all recorded interaction proposals. Six predefined scopes/resets authorized. Later PROJECT approvals waived; remaining document checkpoints preapproved under autodoc/autoloop. Implementation/package QC not selected.
 - Tracking: documentation and implementation enabled by existing root AGENTS.md. All nine standard issues and native milestone verified before any preparation write. Publication: push/read back every owned commit.
 - Stop: all six passes through final DOCS-008. DOCS-009/package QC, documentation integration and implementation are outside the current automatic range.
@@ -112,6 +112,7 @@ The user approved the published brief and recorded interaction proposals on 2026
 | Pass 5 / DOCS-004 | DECOMPOSITION.md SHA-256 3105fb07f123685bc52e99196e63032e58958e49df3520b814579991f23e7771; Reviewed settings model/view/core-policy collaboration and two distinct lifetimes (page settings versus game/piece state). Next preview consumes no randomness; invalid updates are atomic no-ops. Scoped autoloop preapproval applies. |
 | Pass 5 / DOCS-005 | SPEC.md SHA-256 99759e7b179b87a484b04961e83fabf0086e4a4ac0169dd8986209328a64a444; C01–C04 and lock-policy matrix Ready after design conformance; current scope remains session-only. Scoped autoloop preapproval applies. |
 | Pass 5 / DOCS-006 | PLAN.md SHA-256 f90d01d1b96bdf554538d49533d2fe70f7917a6ecec180b958bd6367618bfbea; Phase 5 appended with session-only exits, explicit no-persistence coverage and 0.5.0; protected ranges unchanged. Scoped autoloop preapproval applies. |
+| Pass 5 / DOCS-007 | layout.md SHA-256 a3b9ab69818e98107001e1fd5a46553db8808bd14588adf1f921213b8d089ec0; Settings/model/view/policy/preview source and checks allocated; combined review Ready. Scoped autoloop preapproval applies. |
 
 ## Initialization and current reset
 
@@ -125,4 +126,4 @@ The user approved the published brief and recorded interaction proposals on 2026
 
 ## Pending transitions
 
-Publish/read back the current Pass 5 DOCS-006 checkpoint and close/read back issue #6 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.
+Publish/read back the current Pass 5 DOCS-007 checkpoint and close/read back issue #7 with its exact commit evidence. Recover actual Git/hosted state before replay. Then prepare the next document in dependency order.

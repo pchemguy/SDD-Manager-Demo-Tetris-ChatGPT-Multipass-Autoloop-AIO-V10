@@ -122,3 +122,17 @@ Scope: PLAN conformance; cumulative scope 5. Current source identities:
 C01–C04 map to 5.1 with independent review 5.2. Delivery milestone counts: 1/2/1/1/1 for Phases 1–5, excluding special reviews. Small-group review retains one cohesive configurable-session capability; persistence is independent and excluded, rather than hidden in settings setup. Phase 3 remains the intentionally narrow policy increment; the later phases are substantive ability and configuration outcomes, not a chain of trivial file edits. Exact earlier PLAN prefix retained. Strategy Ready pending current placement recheck.
 
 Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.
+
+## Revision 9
+
+Scope: PLAN conformance; cumulative scope 5. Current source identities:
+
+- PLAN.md: SHA-256 `f90d01d1b96bdf554538d49533d2fe70f7917a6ecec180b958bd6367618bfbea`.
+- SPEC.md: SHA-256 `99759e7b179b87a484b04961e83fabf0086e4a4ac0169dd8986209328a64a444`.
+- ARCHITECTURE.md: SHA-256 `3fa49b6ee8bdd4345dee7d7f2abe13c06f8be9394ba13bafcba30ba32acc52fb`.
+- DECOMPOSITION.md: SHA-256 `3105fb07f123685bc52e99196e63032e58958e49df3520b814579991f23e7771`.
+- layout.md: SHA-256 `a3b9ab69818e98107001e1fd5a46553db8808bd14588adf1f921213b8d089ec0`.
+
+Combined placement maps settings state/validation, controls, controller lifecycle, engine policy snapshots and source/view consumers to bounded homes with unit/browser checks. No settings state is duplicated in DOM or game restart state. Session-only behavior requires no persistence adapter. C01–C04 and one integrated delivery milestone have complete paths; earlier allocations retained. Ready for TASKS.
+
+Findings: none unresolved after the scoped semantic review. Gate: **Ready** for the next document stage only. This is document conformance evidence; no implementation, browser execution or whole-package QC is claimed.
